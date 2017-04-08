@@ -1,0 +1,1829 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<eCog.Proc UserName="mveitzel" Company="" Copyright="" version="20091027" use-reproducable-poly="1" project-unit="5" engine-version="8.9.1" engine-build="2322" update-topology="0" distance_calculation="CG" resampling_compatibility="0" ver="0">
+	<ruleset-info>
+		<name></name>
+		<author>mveitzel</author>
+		<tags></tags>
+		<version></version>
+		<description></description>
+		<input></input>
+		<output></output>
+	</ruleset-info>
+	<ParamValueSetCntnr></ParamValueSetCntnr>
+	<ObjectDependencies>
+		<ImgLayers>
+			<ChnlProxyCntnr>
+				<Layers>
+					<ChnlProxy strName="R" flags="12">
+						<Assignment Chnl="-1" MapName="main"></Assignment>
+						<Scope GUID="00000000-0000-0000-0000-000000000000"></Scope>
+					</ChnlProxy>
+					<ChnlProxy strName="G" flags="12">
+						<Assignment Chnl="-1" MapName="main"></Assignment>
+						<Scope GUID="00000000-0000-0000-0000-000000000000"></Scope>
+					</ChnlProxy>
+					<ChnlProxy strName="B" flags="12">
+						<Assignment Chnl="-1" MapName="main"></Assignment>
+						<Scope GUID="00000000-0000-0000-0000-000000000000"></Scope>
+					</ChnlProxy>
+					<ChnlProxy strName="IR" flags="12">
+						<Assignment Chnl="-1" MapName="main"></Assignment>
+						<Scope GUID="00000000-0000-0000-0000-000000000000"></Scope>
+					</ChnlProxy>
+					<ChnlProxy strName="mean" flags="12">
+						<Assignment Chnl="5" MapName="main"></Assignment>
+						<LastAssignment Chnl="5" MapName="main"></LastAssignment>
+						<Scope GUID="00000000-0000-0000-0000-000000000000"></Scope>
+					</ChnlProxy>
+					<ChnlProxy strName="secondmoment" flags="12">
+						<Assignment Chnl="7" MapName="main"></Assignment>
+						<LastAssignment Chnl="7" MapName="main"></LastAssignment>
+						<Scope GUID="00000000-0000-0000-0000-000000000000"></Scope>
+					</ChnlProxy>
+					<ChnlProxy strName="contrast" flags="12">
+						<Assignment Chnl="2" MapName="main"></Assignment>
+						<LastAssignment Chnl="2" MapName="main"></LastAssignment>
+						<Scope GUID="00000000-0000-0000-0000-000000000000"></Scope>
+					</ChnlProxy>
+					<ChnlProxy strName="dissimilarity" flags="12">
+						<Assignment Chnl="3" MapName="main"></Assignment>
+						<LastAssignment Chnl="3" MapName="main"></LastAssignment>
+						<Scope GUID="00000000-0000-0000-0000-000000000000"></Scope>
+					</ChnlProxy>
+					<ChnlProxy strName="entropy" flags="12">
+						<Assignment Chnl="0" MapName="main"></Assignment>
+						<LastAssignment Chnl="0" MapName="main"></LastAssignment>
+						<Scope GUID="00000000-0000-0000-0000-000000000000"></Scope>
+					</ChnlProxy>
+					<ChnlProxy strName="homogeneity" flags="12">
+						<Assignment Chnl="4" MapName="main"></Assignment>
+						<LastAssignment Chnl="4" MapName="main"></LastAssignment>
+						<Scope GUID="00000000-0000-0000-0000-000000000000"></Scope>
+					</ChnlProxy>
+					<ChnlProxy strName="variance" flags="12">
+						<Assignment Chnl="6" MapName="main"></Assignment>
+						<LastAssignment Chnl="6" MapName="main"></LastAssignment>
+						<Scope GUID="00000000-0000-0000-0000-000000000000"></Scope>
+					</ChnlProxy>
+					<ChnlProxy strName="image" flags="12">
+						<Assignment Chnl="1" MapName="main"></Assignment>
+						<LastAssignment Chnl="1" MapName="main"></LastAssignment>
+						<Scope GUID="00000000-0000-0000-0000-000000000000"></Scope>
+					</ChnlProxy>
+				</Layers>
+				<Variables></Variables>
+			</ChnlProxyCntnr>
+		</ImgLayers>
+		<ThmLayers>
+			<ChnlProxyCntnr>
+				<Layers></Layers>
+				<Variables></Variables>
+			</ChnlProxyCntnr>
+		</ThmLayers>
+		<MapLvlProxyCntnr>
+			<MapLvlProxies>
+				<MapLvlProxy strName="ForestPrairieMask" bVrbl="0">
+					<Assignment MapLvl="1" MapName="main"></Assignment>
+					<Scope GUID="00000000-0000-0000-0000-000000000000"></Scope>
+				</MapLvlProxy>
+			</MapLvlProxies>
+			<MapLvlVrblValues></MapLvlVrblValues>
+		</MapLvlProxyCntnr>
+		<ProcVrblCntnr></ProcVrblCntnr>
+		<ClssHrchy EvalInvalid="1" MinProb="0.10000000000000001" NNSlope="0.20000000000000001" RdiResamplOptns="3">
+			<MapUnit>
+				<Map MapName="main" Unit="5"></Map>
+			</MapUnit>
+			<AllClss>
+				<Clss id="2" name="Cover" flag="0" iMaskID="-1" bUsePrntClr="0" dPrntClssBrghtns="0." termType="0" strUserName="mveitzel" tChngTime="1402611515" bShow="0" Trans="0." sComment="">
+					<LcnsInfo sLcnsId="" sPwd=""></LcnsInfo>
+					<Scope GUID="00000000-0000-0000-0000-000000000000"></Scope>
+					<Color R="189" G="0" B="0"></Color>
+					<SharedInfo bShared="0" strInstGUID=""></SharedInfo>
+				</Clss>
+				<Clss id="1" name="garbage" flag="0" iMaskID="-1" bUsePrntClr="0" dPrntClssBrghtns="0." termType="0" strUserName="mveitzel" tChngTime="1402608861" bShow="0" Trans="0." sComment="">
+					<LcnsInfo sLcnsId="" sPwd=""></LcnsInfo>
+					<Scope GUID="00000000-0000-0000-0000-000000000000"></Scope>
+					<Color R="192" G="220" B="192"></Color>
+					<SharedInfo bShared="0" strInstGUID=""></SharedInfo>
+				</Clss>
+				<Clss id="6" name="Grass" flag="0" iMaskID="-1" bUsePrntClr="0" dPrntClssBrghtns="0." termType="0" strUserName="mveitzel" tChngTime="1403496935" bShow="0" Trans="0." sComment="">
+					<LcnsInfo sLcnsId="" sPwd=""></LcnsInfo>
+					<Scope GUID="00000000-0000-0000-0000-000000000000"></Scope>
+					<Color R="255" G="255" B="0"></Color>
+					<SharedInfo bShared="0" strInstGUID=""></SharedInfo>
+				</Clss>
+				<Clss id="7" name="BareGround" flag="0" iMaskID="-1" bUsePrntClr="0" dPrntClssBrghtns="0." termType="0" strUserName="mveitzel" tChngTime="1402612388" bShow="0" Trans="0." sComment="">
+					<LcnsInfo sLcnsId="" sPwd=""></LcnsInfo>
+					<Scope GUID="00000000-0000-0000-0000-000000000000"></Scope>
+					<Color R="0" G="0" B="255"></Color>
+					<SharedInfo bShared="0" strInstGUID=""></SharedInfo>
+				</Clss>
+				<Clss id="13" name="Forest" flag="0" iMaskID="-1" bUsePrntClr="0" dPrntClssBrghtns="0." termType="0" strUserName="mveitzel" tChngTime="1403642727" bShow="0" Trans="0." sComment="">
+					<LcnsInfo sLcnsId="" sPwd=""></LcnsInfo>
+					<Scope GUID="00000000-0000-0000-0000-000000000000"></Scope>
+					<Color R="0" G="128" B="0"></Color>
+					<SharedInfo bShared="0" strInstGUID=""></SharedInfo>
+				</Clss>
+				<Clss id="14" name="Prairie" flag="0" iMaskID="-1" bUsePrntClr="0" dPrntClssBrghtns="0." termType="0" strUserName="mveitzel" tChngTime="1403642756" bShow="0" Trans="0." sComment="">
+					<LcnsInfo sLcnsId="" sPwd=""></LcnsInfo>
+					<Scope GUID="00000000-0000-0000-0000-000000000000"></Scope>
+					<Color R="255" G="192" B="87"></Color>
+					<SharedInfo bShared="0" strInstGUID=""></SharedInfo>
+				</Clss>
+				<Clss id="15" name="Masks" flag="2" iMaskID="-1" bUsePrntClr="0" dPrntClssBrghtns="0." termType="0" strUserName="mveitzel" tChngTime="1403642771" bShow="0" Trans="0." sComment="">
+					<LcnsInfo sLcnsId="" sPwd=""></LcnsInfo>
+					<Scope GUID="00000000-0000-0000-0000-000000000000"></Scope>
+					<Color R="255" G="255" B="255"></Color>
+					<SharedInfo bShared="0" strInstGUID=""></SharedInfo>
+				</Clss>
+				<Clss id="16" name="Classes" flag="2" iMaskID="-1" bUsePrntClr="0" dPrntClssBrghtns="0." termType="0" strUserName="mveitzel" tChngTime="1403642801" bShow="0" Trans="0." sComment="">
+					<LcnsInfo sLcnsId="" sPwd=""></LcnsInfo>
+					<Scope GUID="00000000-0000-0000-0000-000000000000"></Scope>
+					<Color R="255" G="251" B="240"></Color>
+					<SharedInfo bShared="0" strInstGUID=""></SharedInfo>
+				</Clss>
+			</AllClss>
+			<PropTree version="20100426">
+				<AllProps>
+					<PropDscr Flag="65564" strUserName="mveitzel" tChngTime="1386881900" group_id="ext.geom.object.prop">
+						<PropDscrId GUID="F4CD2EB0-F2FB-47fb-89A3-369FE9B58085" InstID="Border length"></PropDscrId>
+						<LcnsInfo sLcnsId="" sPwd=""></LcnsInfo>
+						<Scope GUID="00000000-0000-0000-0000-000000000000"></Scope>
+						<DUnitInfo Conversion="0" UnitType="1" Dim="1"></DUnitInfo>
+						<Params></Params>
+					</PropDscr>
+					<PropDscr Flag="28" strUserName="mveitzel" tChngTime="1386881900" group_id="mean.chnl.object.prop">
+						<PropDscrId GUID="44411C83-609B-4758-93D3-FF62DF246855" InstID="Mean IR"></PropDscrId>
+						<LcnsInfo sLcnsId="" sPwd=""></LcnsInfo>
+						<Scope GUID="00000000-0000-0000-0000-000000000000"></Scope>
+						<Params>
+							<DValue type="img_chnl" value="IR" scope="" name="valChnl"></DValue>
+						</Params>
+					</PropDscr>
+					<PropDscr Flag="28" strUserName="mveitzel" tChngTime="1386881900" group_id="mean.chnl.object.prop">
+						<PropDscrId GUID="44411C83-609B-4758-93D3-FF62DF246855" InstID="Mean R"></PropDscrId>
+						<LcnsInfo sLcnsId="" sPwd=""></LcnsInfo>
+						<Scope GUID="00000000-0000-0000-0000-000000000000"></Scope>
+						<Params>
+							<DValue type="img_chnl" value="R" scope="" name="valChnl"></DValue>
+						</Params>
+					</PropDscr>
+					<PropDscr Flag="16777244" strUserName="mveitzel" tChngTime="1386883126" group_id="cust.object.prop">
+						<PropDscrId GUID="E869FC89-440F-41e4-A7DF-1E9DE9040CEC" InstID="NDVI"></PropDscrId>
+						<LcnsInfo sLcnsId="" sPwd=""></LcnsInfo>
+						<Scope GUID="00000000-0000-0000-0000-000000000000"></Scope>
+						<Params>
+							<DValue value="_NDVI" type="string" name="NameExpr"></DValue>
+							<DValue type="vector" name="valPropVctr">
+								<Values>
+									<DValue type="propDscrId" indx="0">
+									<PropDscrId GUID="44411C83-609B-4758-93D3-FF62DF246855" InstID="Mean IR"></PropDscrId>
+									</DValue>
+									<DValue type="propDscrId" indx="1">
+									<PropDscrId GUID="44411C83-609B-4758-93D3-FF62DF246855" InstID="Mean R"></PropDscrId>
+									</DValue>
+								</Values>
+							</DValue>
+							<DValue value="(d00;-d01;)/(d00;+d01;)" type="string" name="strExpr"></DValue>
+							<DValue value="0" type="int" name="iUnit"></DValue>
+							<DValue value="" type="string" name="Comment"></DValue>
+							<DValue value="1" type="bool" name="bUseDeg"></DValue>
+							<DValue value="0" type="bool" name="bUseUnit"></DValue>
+							<DValue value="0" type="bool" name="bShared"></DValue>
+							<DValue value="" type="string" name="strInstGUID"></DValue>
+						</Params>
+					</PropDscr>
+					<PropDscr Flag="28" strUserName="mveitzel" tChngTime="1386881900" group_id="shape.geom.object.prop">
+						<PropDscrId GUID="D9CC01FF-7C3D-4861-9608-38D8EB2D3CCC" InstID="Asymmetry"></PropDscrId>
+						<LcnsInfo sLcnsId="" sPwd=""></LcnsInfo>
+						<Scope GUID="00000000-0000-0000-0000-000000000000"></Scope>
+						<Params></Params>
+					</PropDscr>
+					<PropDscr Flag="2" strUserName="mveitzel" tChngTime="1407192670" group_id="relbrdr.nghb.class.prop">
+						<PropDscrId GUID="AA7CAC99-696D-4983-8F48-D07C4F816F2C" InstID="Rel. border to Cover"></PropDscrId>
+						<LcnsInfo sLcnsId="" sPwd=""></LcnsInfo>
+						<Scope GUID="00000000-0000-0000-0000-000000000000"></Scope>
+						<Params>
+							<DValue value="2" type="clssId" name="valClss"></DValue>
+						</Params>
+					</PropDscr>
+					<PropDscr Flag="28" strUserName="mveitzel" tChngTime="1386881900" group_id="All directions.GLCM Contrast.haralik.texture.object.prop">
+						<PropDscrId GUID="A9590711-1F40-43c5-9F7D-D1E8F69BEB0A" InstID="GLCM Contrast (all dir.)"></PropDscrId>
+						<LcnsInfo sLcnsId="" sPwd=""></LcnsInfo>
+						<Scope GUID="00000000-0000-0000-0000-000000000000"></Scope>
+						<Params></Params>
+					</PropDscr>
+					<PropDscr Flag="0" strUserName="mveitzel" tChngTime="1403643664" group_id="exist.super.class.prop">
+						<PropDscrId GUID="7F30AE70-0DDD-483c-A693-7698C3CB96FF" InstID="Existence of super objects garbage (1)"></PropDscrId>
+						<LcnsInfo sLcnsId="" sPwd=""></LcnsInfo>
+						<Scope GUID="00000000-0000-0000-0000-000000000000"></Scope>
+						<Params>
+							<DValue value="1" type="clssId" name="valClss"></DValue>
+							<DValue value="1" type="int" name="iDist"></DValue>
+						</Params>
+					</PropDscr>
+					<PropDscr Flag="0" strUserName="mveitzel" tChngTime="1403644722" group_id="exist.super.class.prop">
+						<PropDscrId GUID="7F30AE70-0DDD-483c-A693-7698C3CB96FF" InstID="Existence of super objects Forest (1)"></PropDscrId>
+						<LcnsInfo sLcnsId="" sPwd=""></LcnsInfo>
+						<Scope GUID="00000000-0000-0000-0000-000000000000"></Scope>
+						<Params>
+							<DValue value="13" type="clssId" name="valClss"></DValue>
+							<DValue value="1" type="int" name="iDist"></DValue>
+						</Params>
+					</PropDscr>
+					<PropDscr Flag="0" strUserName="mveitzel" tChngTime="1403656889" group_id="exist.super.class.prop">
+						<PropDscrId GUID="7F30AE70-0DDD-483c-A693-7698C3CB96FF" InstID="Existence of super objects Prairie (1)"></PropDscrId>
+						<LcnsInfo sLcnsId="" sPwd=""></LcnsInfo>
+						<Scope GUID="00000000-0000-0000-0000-000000000000"></Scope>
+						<Params>
+							<DValue value="14" type="clssId" name="valClss"></DValue>
+							<DValue value="1" type="int" name="iDist"></DValue>
+						</Params>
+					</PropDscr>
+					<PropDscr Flag="28" strUserName="mveitzel" tChngTime="1386883156" group_id="stdev.chnl.object.prop">
+						<PropDscrId GUID="4B11667E-1449-440f-8D7B-0A4D90E62B3E" InstID="Standard deviation R"></PropDscrId>
+						<LcnsInfo sLcnsId="" sPwd=""></LcnsInfo>
+						<Scope GUID="00000000-0000-0000-0000-000000000000"></Scope>
+						<Params>
+							<DValue type="img_chnl" value="R" scope="" name="valChnl"></DValue>
+						</Params>
+					</PropDscr>
+					<PropDscr Flag="28" strUserName="mveitzel" tChngTime="1386883156" group_id="stdev.chnl.object.prop">
+						<PropDscrId GUID="4B11667E-1449-440f-8D7B-0A4D90E62B3E" InstID="Standard deviation IR"></PropDscrId>
+						<LcnsInfo sLcnsId="" sPwd=""></LcnsInfo>
+						<Scope GUID="00000000-0000-0000-0000-000000000000"></Scope>
+						<Params>
+							<DValue type="img_chnl" value="IR" scope="" name="valChnl"></DValue>
+						</Params>
+					</PropDscr>
+					<PropDscr Flag="28" strUserName="mveitzel" tChngTime="1386883155" group_id="stdev.chnl.object.prop">
+						<PropDscrId GUID="4B11667E-1449-440f-8D7B-0A4D90E62B3E" InstID="Standard deviation G"></PropDscrId>
+						<LcnsInfo sLcnsId="" sPwd=""></LcnsInfo>
+						<Scope GUID="00000000-0000-0000-0000-000000000000"></Scope>
+						<Params>
+							<DValue type="img_chnl" value="G" scope="" name="valChnl"></DValue>
+						</Params>
+					</PropDscr>
+					<PropDscr Flag="28" strUserName="mveitzel" tChngTime="1386883155" group_id="stdev.chnl.object.prop">
+						<PropDscrId GUID="4B11667E-1449-440f-8D7B-0A4D90E62B3E" InstID="Standard deviation B"></PropDscrId>
+						<LcnsInfo sLcnsId="" sPwd=""></LcnsInfo>
+						<Scope GUID="00000000-0000-0000-0000-000000000000"></Scope>
+						<Params>
+							<DValue type="img_chnl" value="B" scope="" name="valChnl"></DValue>
+						</Params>
+					</PropDscr>
+					<PropDscr Flag="2" strUserName="mveitzel" tChngTime="1407211021" group_id="mean.chnl.object.prop">
+						<PropDscrId GUID="44411C83-609B-4758-93D3-FF62DF246855" InstID="Mean variance"></PropDscrId>
+						<LcnsInfo sLcnsId="" sPwd=""></LcnsInfo>
+						<Scope GUID="00000000-0000-0000-0000-000000000000"></Scope>
+						<Params>
+							<DValue type="img_chnl" value="variance" scope="" name="valChnl"></DValue>
+						</Params>
+					</PropDscr>
+					<PropDscr Flag="2" strUserName="mveitzel" tChngTime="1407211020" group_id="mean.chnl.object.prop">
+						<PropDscrId GUID="44411C83-609B-4758-93D3-FF62DF246855" InstID="Mean secondmoment"></PropDscrId>
+						<LcnsInfo sLcnsId="" sPwd=""></LcnsInfo>
+						<Scope GUID="00000000-0000-0000-0000-000000000000"></Scope>
+						<Params>
+							<DValue type="img_chnl" value="secondmoment" scope="" name="valChnl"></DValue>
+						</Params>
+					</PropDscr>
+					<PropDscr Flag="2" strUserName="mveitzel" tChngTime="1407211019" group_id="mean.chnl.object.prop">
+						<PropDscrId GUID="44411C83-609B-4758-93D3-FF62DF246855" InstID="Mean mean"></PropDscrId>
+						<LcnsInfo sLcnsId="" sPwd=""></LcnsInfo>
+						<Scope GUID="00000000-0000-0000-0000-000000000000"></Scope>
+						<Params>
+							<DValue type="img_chnl" value="mean" scope="" name="valChnl"></DValue>
+						</Params>
+					</PropDscr>
+					<PropDscr Flag="2" strUserName="mveitzel" tChngTime="1407211019" group_id="mean.chnl.object.prop">
+						<PropDscrId GUID="44411C83-609B-4758-93D3-FF62DF246855" InstID="Mean homogeneity"></PropDscrId>
+						<LcnsInfo sLcnsId="" sPwd=""></LcnsInfo>
+						<Scope GUID="00000000-0000-0000-0000-000000000000"></Scope>
+						<Params>
+							<DValue type="img_chnl" value="homogeneity" scope="" name="valChnl"></DValue>
+						</Params>
+					</PropDscr>
+					<PropDscr Flag="2" strUserName="mveitzel" tChngTime="1407211018" group_id="mean.chnl.object.prop">
+						<PropDscrId GUID="44411C83-609B-4758-93D3-FF62DF246855" InstID="Mean entropy"></PropDscrId>
+						<LcnsInfo sLcnsId="" sPwd=""></LcnsInfo>
+						<Scope GUID="00000000-0000-0000-0000-000000000000"></Scope>
+						<Params>
+							<DValue type="img_chnl" value="entropy" scope="" name="valChnl"></DValue>
+						</Params>
+					</PropDscr>
+					<PropDscr Flag="2" strUserName="mveitzel" tChngTime="1407211017" group_id="mean.chnl.object.prop">
+						<PropDscrId GUID="44411C83-609B-4758-93D3-FF62DF246855" InstID="Mean dissimilarity"></PropDscrId>
+						<LcnsInfo sLcnsId="" sPwd=""></LcnsInfo>
+						<Scope GUID="00000000-0000-0000-0000-000000000000"></Scope>
+						<Params>
+							<DValue type="img_chnl" value="dissimilarity" scope="" name="valChnl"></DValue>
+						</Params>
+					</PropDscr>
+					<PropDscr Flag="2" strUserName="mveitzel" tChngTime="1407211016" group_id="mean.chnl.object.prop">
+						<PropDscrId GUID="44411C83-609B-4758-93D3-FF62DF246855" InstID="Mean contrast"></PropDscrId>
+						<LcnsInfo sLcnsId="" sPwd=""></LcnsInfo>
+						<Scope GUID="00000000-0000-0000-0000-000000000000"></Scope>
+						<Params>
+							<DValue type="img_chnl" value="contrast" scope="" name="valChnl"></DValue>
+						</Params>
+					</PropDscr>
+					<PropDscr Flag="28" strUserName="mveitzel" tChngTime="1386881900" group_id="mean.chnl.object.prop">
+						<PropDscrId GUID="44411C83-609B-4758-93D3-FF62DF246855" InstID="Mean B"></PropDscrId>
+						<LcnsInfo sLcnsId="" sPwd=""></LcnsInfo>
+						<Scope GUID="00000000-0000-0000-0000-000000000000"></Scope>
+						<Params>
+							<DValue type="img_chnl" value="B" scope="" name="valChnl"></DValue>
+						</Params>
+					</PropDscr>
+					<PropDscr Flag="28" strUserName="mveitzel" tChngTime="1386881900" group_id="mean.chnl.object.prop">
+						<PropDscrId GUID="44411C83-609B-4758-93D3-FF62DF246855" InstID="Mean G"></PropDscrId>
+						<LcnsInfo sLcnsId="" sPwd=""></LcnsInfo>
+						<Scope GUID="00000000-0000-0000-0000-000000000000"></Scope>
+						<Params>
+							<DValue type="img_chnl" value="G" scope="" name="valChnl"></DValue>
+						</Params>
+					</PropDscr>
+					<PropDscr Flag="2" strUserName="mveitzel" tChngTime="1413508691" group_id="mean.chnl.object.prop">
+						<PropDscrId GUID="44411C83-609B-4758-93D3-FF62DF246855" InstID="Mean image"></PropDscrId>
+						<LcnsInfo sLcnsId="" sPwd=""></LcnsInfo>
+						<Scope GUID="00000000-0000-0000-0000-000000000000"></Scope>
+						<Params>
+							<DValue type="img_chnl" value="image" scope="" name="valChnl"></DValue>
+						</Params>
+					</PropDscr>
+					<PropDscr Flag="28" strUserName="mveitzel" tChngTime="1386881900" group_id="shape.geom.object.prop">
+						<PropDscrId GUID="40CC7324-96B4-409c-B786-B184C1259197" InstID="Shape index"></PropDscrId>
+						<LcnsInfo sLcnsId="" sPwd=""></LcnsInfo>
+						<Scope GUID="00000000-0000-0000-0000-000000000000"></Scope>
+						<Params></Params>
+					</PropDscr>
+					<PropDscr Flag="0" strUserName="mveitzel" tChngTime="1403658487" group_id="classname.classfy.class.prop">
+						<PropDscrId GUID="2ECAB4E2-FCE5-4471-86D1-71A09D4892AE" InstID="Class name(0,0)"></PropDscrId>
+						<LcnsInfo sLcnsId="" sPwd=""></LcnsInfo>
+						<Scope GUID="00000000-0000-0000-0000-000000000000"></Scope>
+						<Params>
+							<DValue value="0" type="int" name="iDistClss"></DValue>
+							<DValue value="0" type="int" name="iDistImgObj"></DValue>
+							<DValue value="0" type="bool" name="bIntrnName"></DValue>
+						</Params>
+					</PropDscr>
+					<PropDscr Flag="28" strUserName="mveitzel" tChngTime="1386881900" group_id="shape.geom.object.prop">
+						<PropDscrId GUID="1F03F8EB-A21A-4d53-B9DA-391FFE1B804D" InstID="Compactness"></PropDscrId>
+						<LcnsInfo sLcnsId="" sPwd=""></LcnsInfo>
+						<Scope GUID="00000000-0000-0000-0000-000000000000"></Scope>
+						<Params></Params>
+					</PropDscr>
+					<PropDscr Flag="28" strUserName="mveitzel" tChngTime="1386881900" group_id="mean.chnl.object.prop">
+						<PropDscrId GUID="16B7A5B4-D807-4ab1-B769-D536B3C26B20" InstID="Brightness"></PropDscrId>
+						<LcnsInfo sLcnsId="" sPwd=""></LcnsInfo>
+						<Scope GUID="00000000-0000-0000-0000-000000000000"></Scope>
+						<Params></Params>
+					</PropDscr>
+					<PropDscr Flag="65566" strUserName="mveitzel" tChngTime="1386881900" group_id="ext.geom.object.prop">
+						<PropDscrId GUID="03E04ED0-94DD-45ee-801E-14D70E6E2417" InstID="Area"></PropDscrId>
+						<LcnsInfo sLcnsId="" sPwd=""></LcnsInfo>
+						<Scope GUID="00000000-0000-0000-0000-000000000000"></Scope>
+						<DUnitInfo Conversion="0" UnitType="1" Dim="2"></DUnitInfo>
+						<Params></Params>
+					</PropDscr>
+				</AllProps>
+				<UserGroups></UserGroups>
+			</PropTree>
+			<Brightness>
+				<Map MapName="main">
+					<ChnlWghtBrght>
+						<BrghtWght val="1." chnl="0"></BrghtWght>
+						<BrghtWght val="1." chnl="1"></BrghtWght>
+						<BrghtWght val="1." chnl="2"></BrghtWght>
+						<BrghtWght val="1." chnl="3"></BrghtWght>
+						<BrghtWght val="1." chnl="4"></BrghtWght>
+						<BrghtWght val="1." chnl="5"></BrghtWght>
+						<BrghtWght val="1." chnl="6"></BrghtWght>
+						<BrghtWght val="1." chnl="7"></BrghtWght>
+					</ChnlWghtBrght>
+				</Map>
+			</Brightness>
+			<AllVrblClss></AllVrblClss>
+			<AllSubClss>
+				<Clss Id="2" PrfdGrp="16">
+					<SubClss></SubClss>
+					<SubGrp></SubGrp>
+				</Clss>
+				<Clss Id="1" PrfdGrp="15">
+					<SubClss></SubClss>
+					<SubGrp></SubGrp>
+				</Clss>
+				<Clss Id="6" PrfdGrp="16">
+					<SubClss></SubClss>
+					<SubGrp></SubGrp>
+				</Clss>
+				<Clss Id="7" PrfdGrp="16">
+					<SubClss></SubClss>
+					<SubGrp></SubGrp>
+				</Clss>
+				<Clss Id="13" PrfdGrp="15">
+					<SubClss></SubClss>
+					<SubGrp></SubGrp>
+				</Clss>
+				<Clss Id="14" PrfdGrp="15">
+					<SubClss></SubClss>
+					<SubGrp></SubGrp>
+				</Clss>
+				<Clss Id="15" PrfdGrp="15">
+					<SubClss></SubClss>
+					<SubGrp>
+						<Grp Id="14"></Grp>
+						<Grp Id="1"></Grp>
+						<Grp Id="13"></Grp>
+					</SubGrp>
+				</Clss>
+				<Clss Id="16" PrfdGrp="16">
+					<SubClss></SubClss>
+					<SubGrp>
+						<Grp Id="7"></Grp>
+						<Grp Id="2"></Grp>
+						<Grp Id="6"></Grp>
+					</SubGrp>
+				</Clss>
+			</AllSubClss>
+			<AllTerm>
+				<Term TermEvalType="0">
+					<TermNearNghb StdNN="1">
+						<TermBase ClssId="2" flags="2" sComment="">
+							<Weight>
+								<DValue value="1" type="int"></DValue>
+							</Weight>
+						</TermBase>
+					</TermNearNghb>
+					<TermBase ClssId="2" flags="0" sComment="">
+						<Weight>
+							<DValue value="1" type="int"></DValue>
+						</Weight>
+					</TermBase>
+				</Term>
+				<Term TermEvalType="0">
+					<TermNearNghb StdNN="1">
+						<TermBase ClssId="1" flags="2" sComment="">
+							<Weight>
+								<DValue value="1" type="int"></DValue>
+							</Weight>
+						</TermBase>
+					</TermNearNghb>
+					<TermBase ClssId="1" flags="0" sComment="">
+						<Weight>
+							<DValue value="1" type="int"></DValue>
+						</Weight>
+					</TermBase>
+				</Term>
+				<Term TermEvalType="0">
+					<TermNearNghb StdNN="1">
+						<TermBase ClssId="6" flags="2" sComment="">
+							<Weight>
+								<DValue value="1" type="int"></DValue>
+							</Weight>
+						</TermBase>
+					</TermNearNghb>
+					<TermBase ClssId="6" flags="0" sComment="">
+						<Weight>
+							<DValue value="1" type="int"></DValue>
+						</Weight>
+					</TermBase>
+				</Term>
+				<Term TermEvalType="0">
+					<TermNearNghb StdNN="1">
+						<TermBase ClssId="7" flags="2" sComment="">
+							<Weight>
+								<DValue value="1" type="int"></DValue>
+							</Weight>
+						</TermBase>
+					</TermNearNghb>
+					<TermBase ClssId="7" flags="0" sComment="">
+						<Weight>
+							<DValue value="1" type="int"></DValue>
+						</Weight>
+					</TermBase>
+				</Term>
+				<Term TermEvalType="0">
+					<TermBase ClssId="13" flags="0" sComment="">
+						<Weight>
+							<DValue value="1" type="int"></DValue>
+						</Weight>
+					</TermBase>
+				</Term>
+				<Term TermEvalType="0">
+					<TermBase ClssId="14" flags="0" sComment="">
+						<Weight>
+							<DValue value="1" type="int"></DValue>
+						</Weight>
+					</TermBase>
+				</Term>
+				<Term TermEvalType="0">
+					<TermBase ClssId="15" flags="0" sComment="">
+						<Weight>
+							<DValue value="1" type="int"></DValue>
+						</Weight>
+					</TermBase>
+				</Term>
+				<Term TermEvalType="0">
+					<TermBase ClssId="16" flags="0" sComment="">
+						<Weight>
+							<DValue value="1" type="int"></DValue>
+						</Weight>
+					</TermBase>
+				</Term>
+			</AllTerm>
+		</ClssHrchy>
+		<MapVrblCntnr></MapVrblCntnr>
+		<FtrListVrblCntnr></FtrListVrblCntnr>
+		<CoordVrblCntnr></CoordVrblCntnr>
+		<ROIVrblCntnr></ROIVrblCntnr>
+		<ImgObjListVrblCntnr></ImgObjListVrblCntnr>
+		<ArrayCntnr>
+			<Arrays></Arrays>
+			<ArrayVrbls></ArrayVrbls>
+		</ArrayCntnr>
+		<Smpls>
+			<AllClss>
+				<SmplList ClssId="2"></SmplList>
+				<SmplList ClssId="1"></SmplList>
+				<SmplList ClssId="6"></SmplList>
+				<SmplList ClssId="7">
+					<Smpl FtrRef="0" iFillSize="16">
+						<prop val="9." Index="0"></prop>
+						<prop val="182.88888888888889" Index="1"></prop>
+						<prop val="1.6906342732058446" Index="2"></prop>
+						<prop val="1.6666666666666667" Index="3"></prop>
+						<prop val="142.88888888888889" Index="4"></prop>
+						<prop val="210.55555555555554" Index="5"></prop>
+						<prop val="174.77777777777777" Index="6"></prop>
+						<prop val="203.33333333333334" Index="7"></prop>
+						<prop val="5.8836454643883842" Index="8"></prop>
+						<prop val="5.1639777949438486" Index="9"></prop>
+						<prop val="5.5865800399897312" Index="10"></prop>
+						<prop val="4.399775527383289" Index="11"></prop>
+						<prop val="235.09722222222223" Index="12"></prop>
+						<prop val="0.90543616927648118" Index="13"></prop>
+						<prop val="-0.19144922980194903" Index="14"></prop>
+						<prop val="20." Index="15"></prop>
+					</Smpl>
+					<Smpl FtrRef="0" iFillSize="16">
+						<prop val="12." Index="0"></prop>
+						<prop val="188.8125" Index="1"></prop>
+						<prop val="1.25" Index="2"></prop>
+						<prop val="1.1547005383792517" Index="3"></prop>
+						<prop val="147.66666666666666" Index="4"></prop>
+						<prop val="215.25" Index="5"></prop>
+						<prop val="182.58333333333334" Index="6"></prop>
+						<prop val="209.75" Index="7"></prop>
+						<prop val="3.8396686778363014" Index="8"></prop>
+						<prop val="2.3496453633119474" Index="9"></prop>
+						<prop val="4.1699986677324619" Index="10"></prop>
+						<prop val="2.2407216099581255" Index="11"></prop>
+						<prop val="51.771739130434767" Index="12"></prop>
+						<prop val="0.4431913288451918" Index="13"></prop>
+						<prop val="-0.18622273249138926" Index="14"></prop>
+						<prop val="16." Index="15"></prop>
+					</Smpl>
+					<Smpl FtrRef="0" iFillSize="16">
+						<prop val="30." Index="0"></prop>
+						<prop val="192.94999999999999" Index="1"></prop>
+						<prop val="1.5636687963593225" Index="2"></prop>
+						<prop val="1.8257418583505538" Index="3"></prop>
+						<prop val="155.66666666666666" Index="4"></prop>
+						<prop val="218.19999999999999" Index="5"></prop>
+						<prop val="185.19999999999999" Index="6"></prop>
+						<prop val="212.73333333333332" Index="7"></prop>
+						<prop val="1.9390719429669319" Index="8"></prop>
+						<prop val="1.6110727964795974" Index="9"></prop>
+						<prop val="3.1867782407249714" Index="10"></prop>
+						<prop val="1.4468356276145833" Index="11"></prop>
+						<prop val="50.435555555555553" Index="12"></prop>
+						<prop val="0.9414694306555903" Index="13"></prop>
+						<prop val="-0.16726105563480742" Index="14"></prop>
+						<prop val="40." Index="15"></prop>
+					</Smpl>
+					<Smpl FtrRef="0" iFillSize="16">
+						<prop val="7." Index="0"></prop>
+						<prop val="180.35714285714286" Index="1"></prop>
+						<prop val="1.7142857142857142" Index="2"></prop>
+						<prop val="1.5118578920369088" Index="3"></prop>
+						<prop val="151.71428571428572" Index="4"></prop>
+						<prop val="205.42857142857142" Index="5"></prop>
+						<prop val="164.57142857142858" Index="6"></prop>
+						<prop val="199.71428571428572" Index="7"></prop>
+						<prop val="10.8345629862051" Index="8"></prop>
+						<prop val="7.6851300893216576" Index="9"></prop>
+						<prop val="2.24971653543221" Index="10"></prop>
+						<prop val="8.6661433646306172" Index="11"></prop>
+						<prop val="310.03571428571439" Index="12"></prop>
+						<prop val="0.88165561614720422" Index="13"></prop>
+						<prop val="-0.15039999999999995" Index="14"></prop>
+						<prop val="16." Index="15"></prop>
+					</Smpl>
+					<Smpl FtrRef="0" iFillSize="16">
+						<prop val="9." Index="0"></prop>
+						<prop val="163.41666666666666" Index="1"></prop>
+						<prop val="1.7602650196258678" Index="2"></prop>
+						<prop val="1.6666666666666667" Index="3"></prop>
+						<prop val="119.11111111111111" Index="4"></prop>
+						<prop val="194." Index="5"></prop>
+						<prop val="155.11111111111111" Index="6"></prop>
+						<prop val="185.44444444444446" Index="7"></prop>
+						<prop val="10.321977033327567" Index="8"></prop>
+						<prop val="9.41760893351886" Index="9"></prop>
+						<prop val="3.2126293988449373" Index="10"></prop>
+						<prop val="8.2999330653258205" Index="11"></prop>
+						<prop val="367.90277777777771" Index="12"></prop>
+						<prop val="0.89744860082878186" Index="13"></prop>
+						<prop val="-0.2391767210787793" Index="14"></prop>
+						<prop val="20." Index="15"></prop>
+					</Smpl>
+					<Smpl FtrRef="0" iFillSize="16">
+						<prop val="18." Index="0"></prop>
+						<prop val="148.72222222222223" Index="1"></prop>
+						<prop val="1.8538363993541698" Index="2"></prop>
+						<prop val="1.5320646925708532" Index="3"></prop>
+						<prop val="97.722222222222229" Index="4"></prop>
+						<prop val="178.22222222222223" Index="5"></prop>
+						<prop val="147.55555555555554" Index="6"></prop>
+						<prop val="171.38888888888889" Index="7"></prop>
+						<prop val="5.1985278067956475" Index="8"></prop>
+						<prop val="5.1869375345817383" Index="9"></prop>
+						<prop val="5.6155098270134536" Index="10"></prop>
+						<prop val="4.0215469046342793" Index="11"></prop>
+						<prop val="48.202166064982002" Index="12"></prop>
+						<prop val="0.78257222535377446" Index="13"></prop>
+						<prop val="-0.29172538755788202" Index="14"></prop>
+						<prop val="26." Index="15"></prop>
+					</Smpl>
+					<Smpl FtrRef="0" iFillSize="16">
+						<prop val="12." Index="0"></prop>
+						<prop val="160.22916666666666" Index="1"></prop>
+						<prop val="1.6938975101888067" Index="2"></prop>
+						<prop val="1.8763883748662837" Index="3"></prop>
+						<prop val="102.5" Index="4"></prop>
+						<prop val="190.83333333333334" Index="5"></prop>
+						<prop val="162.41666666666666" Index="6"></prop>
+						<prop val="185.16666666666666" Index="7"></prop>
+						<prop val="5.0242467649944471" Index="8"></prop>
+						<prop val="4.8448139512497113" Index="9"></prop>
+						<prop val="3.730504880933232" Index="10"></prop>
+						<prop val="4.058598553962173" Index="11"></prop>
+						<prop val="106.04166666666654" Index="12"></prop>
+						<prop val="0.94274306682916531" Index="13"></prop>
+						<prop val="-0.30113636363636365" Index="14"></prop>
+						<prop val="26." Index="15"></prop>
+					</Smpl>
+					<Smpl FtrRef="0" iFillSize="16">
+						<prop val="13." Index="0"></prop>
+						<prop val="161.11538461538461" Index="1"></prop>
+						<prop val="1.6825531255698112" Index="2"></prop>
+						<prop val="1.8027756377319948" Index="3"></prop>
+						<prop val="101.46153846153847" Index="4"></prop>
+						<prop val="191.92307692307693" Index="5"></prop>
+						<prop val="164.46153846153845" Index="6"></prop>
+						<prop val="186.61538461538461" Index="7"></prop>
+						<prop val="5.5555292570053494" Index="8"></prop>
+						<prop val="4.8917271063338426" Index="9"></prop>
+						<prop val="3.2490326279909998" Index="10"></prop>
+						<prop val="4.0660231650467997" Index="11"></prop>
+						<prop val="87.269230769230745" Index="12"></prop>
+						<prop val="0.92003363476725997" Index="13"></prop>
+						<prop val="-0.30833770319874149" Index="14"></prop>
+						<prop val="26." Index="15"></prop>
+					</Smpl>
+					<Smpl FtrRef="0" iFillSize="16">
+						<prop val="41." Index="0"></prop>
+						<prop val="174.75" Index="1"></prop>
+						<prop val="1.604974487991816" Index="2"></prop>
+						<prop val="1.7179113807746667" Index="3"></prop>
+						<prop val="118.2439024390244" Index="4"></prop>
+						<prop val="204.7560975609756" Index="5"></prop>
+						<prop val="175.8780487804878" Index="6"></prop>
+						<prop val="200.1219512195122" Index="7"></prop>
+						<prop val="2.9812022615805387" Index="8"></prop>
+						<prop val="2.6057639856359751" Index="9"></prop>
+						<prop val="5.1075290565645473" Index="10"></prop>
+						<prop val="2.7654707869384683" Index="11"></prop>
+						<prop val="51.707472178060449" Index="12"></prop>
+						<prop val="0.92030424264187893" Index="13"></prop>
+						<prop val="-0.26783961338065387" Index="14"></prop>
+						<prop val="44." Index="15"></prop>
+					</Smpl>
+					<Smpl FtrRef="0" iFillSize="16">
+						<prop val="17." Index="0"></prop>
+						<prop val="171.88235294117646" Index="1"></prop>
+						<prop val="1.5316793437456495" Index="2"></prop>
+						<prop val="1.4552137502179978" Index="3"></prop>
+						<prop val="113.47058823529412" Index="4"></prop>
+						<prop val="202.05882352941177" Index="5"></prop>
+						<prop val="174.52941176470588" Index="6"></prop>
+						<prop val="197.47058823529412" Index="7"></prop>
+						<prop val="2.3292929262616116" Index="8"></prop>
+						<prop val="1.7190163760248731" Index="9"></prop>
+						<prop val="3.4319887401917519" Index="10"></prop>
+						<prop val="1.7977302105809447" Index="11"></prop>
+						<prop val="41.325757575757592" Index="12"></prop>
+						<prop val="0.71940407917854943" Index="13"></prop>
+						<prop val="-0.28076062639821031" Index="14"></prop>
+						<prop val="24." Index="15"></prop>
+					</Smpl>
+					<Smpl FtrRef="0" iFillSize="16">
+						<prop val="10." Index="0"></prop>
+						<prop val="162.375" Index="1"></prop>
+						<prop val="1.9039445342822341" Index="2"></prop>
+						<prop val="1.5811388300841895" Index="3"></prop>
+						<prop val="107.09999999999999" Index="4"></prop>
+						<prop val="192.19999999999999" Index="5"></prop>
+						<prop val="164.09999999999999" Index="6"></prop>
+						<prop val="186.09999999999999" Index="7"></prop>
+						<prop val="6.0901559914337584" Index="8"></prop>
+						<prop val="5.5217750769110934" Index="9"></prop>
+						<prop val="3.4190641994556668" Index="10"></prop>
+						<prop val="4.5122056690711334" Index="11"></prop>
+						<prop val="120.53503184713382" Index="12"></prop>
+						<prop val="0.82753255647522228" Index="13"></prop>
+						<prop val="-0.28433010357500837" Index="14"></prop>
+						<prop val="20." Index="15"></prop>
+					</Smpl>
+					<Smpl FtrRef="0" iFillSize="16">
+						<prop val="39." Index="0"></prop>
+						<prop val="170.46153846153845" Index="1"></prop>
+						<prop val="2.0524877611310548" Index="2"></prop>
+						<prop val="2.0816659994661326" Index="3"></prop>
+						<prop val="111.8974358974359" Index="4"></prop>
+						<prop val="200.53846153846155" Index="5"></prop>
+						<prop val="173.30769230769232" Index="6"></prop>
+						<prop val="196.10256410256412" Index="7"></prop>
+						<prop val="3.3062012142985773" Index="8"></prop>
+						<prop val="2.3511576177123712" Index="9"></prop>
+						<prop val="4.3606331685325701" Index="10"></prop>
+						<prop val="1.919483822792263" Index="11"></prop>
+						<prop val="40.77565217391308" Index="12"></prop>
+						<prop val="0.9188066946305935" Index="13"></prop>
+						<prop val="-0.28370947886746001" Index="14"></prop>
+						<prop val="52." Index="15"></prop>
+					</Smpl>
+					<Smpl FtrRef="0" iFillSize="16">
+						<prop val="18." Index="0"></prop>
+						<prop val="159.02777777777777" Index="1"></prop>
+						<prop val="1.6941581734460609" Index="2"></prop>
+						<prop val="2.2391714737574007" Index="3"></prop>
+						<prop val="113.5" Index="4"></prop>
+						<prop val="188.88888888888889" Index="5"></prop>
+						<prop val="152.22222222222223" Index="6"></prop>
+						<prop val="181.5" Index="7"></prop>
+						<prop val="9.5076317623474988" Index="8"></prop>
+						<prop val="8.6039396660935381" Index="9"></prop>
+						<prop val="3.5939764421413041" Index="10"></prop>
+						<prop val="7.6513534669718251" Index="11"></prop>
+						<prop val="221.91666666666669" Index="12"></prop>
+						<prop val="0.96663466571308798" Index="13"></prop>
+						<prop val="-0.24931104170494209" Index="14"></prop>
+						<prop val="38." Index="15"></prop>
+					</Smpl>
+					<Smpl FtrRef="0" iFillSize="16">
+						<prop val="26." Index="0"></prop>
+						<prop val="168.28846153846155" Index="1"></prop>
+						<prop val="2.8611935042928369" Index="2"></prop>
+						<prop val="2.5495097567963927" Index="3"></prop>
+						<prop val="114.23076923076923" Index="4"></prop>
+						<prop val="198.42307692307693" Index="5"></prop>
+						<prop val="167.26923076923077" Index="6"></prop>
+						<prop val="193.23076923076923" Index="7"></prop>
+						<prop val="4.2113189264874462" Index="8"></prop>
+						<prop val="3.4340791208531005" Index="9"></prop>
+						<prop val="3.0421107589668956" Index="10"></prop>
+						<prop val="3.1522040753325831" Index="11"></prop>
+						<prop val="43.068627450980379" Index="12"></prop>
+						<prop val="0.96725482020355746" Index="13"></prop>
+						<prop val="-0.26928281461434372" Index="14"></prop>
+						<prop val="52." Index="15"></prop>
+					</Smpl>
+					<Smpl FtrRef="0" iFillSize="16">
+						<prop val="13." Index="0"></prop>
+						<prop val="159.21153846153845" Index="1"></prop>
+						<prop val="1.8461538461538463" Index="2"></prop>
+						<prop val="1.9414506867883021" Index="3"></prop>
+						<prop val="115.61538461538461" Index="4"></prop>
+						<prop val="189." Index="5"></prop>
+						<prop val="150.76923076923077" Index="6"></prop>
+						<prop val="181.46153846153845" Index="7"></prop>
+						<prop val="5.479385790310161" Index="8"></prop>
+						<prop val="5.7461075067639102" Index="9"></prop>
+						<prop val="5.9295668740312113" Index="10"></prop>
+						<prop val="5.5331170794936755" Index="11"></prop>
+						<prop val="165.52195121951209" Index="12"></prop>
+						<prop val="0.97300534159983321" Index="13"></prop>
+						<prop val="-0.24090909090909091" Index="14"></prop>
+						<prop val="28." Index="15"></prop>
+					</Smpl>
+					<Smpl FtrRef="0" iFillSize="16">
+						<prop val="11." Index="0"></prop>
+						<prop val="169.95454545454547" Index="1"></prop>
+						<prop val="1.7252051053064648" Index="2"></prop>
+						<prop val="1.8090680674665818" Index="3"></prop>
+						<prop val="115.81818181818181" Index="4"></prop>
+						<prop val="201.54545454545453" Index="5"></prop>
+						<prop val="167.45454545454547" Index="6"></prop>
+						<prop val="195." Index="7"></prop>
+						<prop val="6.9852264408355937" Index="8"></prop>
+						<prop val="4.5924839782963955" Index="9"></prop>
+						<prop val="2.5519397904758478" Index="10"></prop>
+						<prop val="3.8697812097800672" Index="11"></prop>
+						<prop val="154.42045454545467" Index="12"></prop>
+						<prop val="0.94297654036664946" Index="13"></prop>
+						<prop val="-0.2701231738756803" Index="14"></prop>
+						<prop val="24." Index="15"></prop>
+					</Smpl>
+					<Smpl FtrRef="0" iFillSize="16">
+						<prop val="3." Index="0"></prop>
+						<prop val="170.66666666666666" Index="1"></prop>
+						<prop val="1." Index="2"></prop>
+						<prop val="1.1547005383792517" Index="3"></prop>
+						<prop val="119.66666666666667" Index="4"></prop>
+						<prop val="199.66666666666666" Index="5"></prop>
+						<prop val="169.66666666666666" Index="6"></prop>
+						<prop val="193.66666666666666" Index="7"></prop>
+						<prop val="2.4944382578496183" Index="8"></prop>
+						<prop val="2.8674417556811571" Index="9"></prop>
+						<prop val="0.94280904158292089" Index="10"></prop>
+						<prop val="2.8674417556811571" Index="11"></prop>
+						<prop val="95.0833333333333" Index="12"></prop>
+						<prop val="0.80000366399219314" Index="13"></prop>
+						<prop val="-0.25052192066805845" Index="14"></prop>
+						<prop val="8." Index="15"></prop>
+					</Smpl>
+					<Smpl FtrRef="0" iFillSize="16">
+						<prop val="18." Index="0"></prop>
+						<prop val="175.91666666666666" Index="1"></prop>
+						<prop val="1.6666666666666667" Index="2"></prop>
+						<prop val="1.2963624321753373" Index="3"></prop>
+						<prop val="118.05555555555556" Index="4"></prop>
+						<prop val="205.38888888888889" Index="5"></prop>
+						<prop val="179.05555555555554" Index="6"></prop>
+						<prop val="201.16666666666666" Index="7"></prop>
+						<prop val="2.0942307583307711" Index="8"></prop>
+						<prop val="1.4240006242195884" Index="9"></prop>
+						<prop val="2.6134741080755908" Index="10"></prop>
+						<prop val="1.1613636089086519" Index="11"></prop>
+						<prop val="22.954887218045126" Index="12"></prop>
+						<prop val="0.57354467560660671" Index="13"></prop>
+						<prop val="-0.27001030573686013" Index="14"></prop>
+						<prop val="22." Index="15"></prop>
+					</Smpl>
+					<Smpl FtrRef="0" iFillSize="16">
+						<prop val="56." Index="0"></prop>
+						<prop val="178.21428571428572" Index="1"></prop>
+						<prop val="1.4136760480413837" Index="2"></prop>
+						<prop val="1.4031215200402281" Index="3"></prop>
+						<prop val="122.19642857142857" Index="4"></prop>
+						<prop val="206.83928571428572" Index="5"></prop>
+						<prop val="180.98214285714286" Index="6"></prop>
+						<prop val="202.83928571428572" Index="7"></prop>
+						<prop val="2.3791585504462462" Index="8"></prop>
+						<prop val="1.623232948187912" Index="9"></prop>
+						<prop val="1.6628250794652313" Index="10"></prop>
+						<prop val="1.3062594594916401" Index="11"></prop>
+						<prop val="20.964646464646471" Index="12"></prop>
+						<prop val="0.85883531761141751" Index="13"></prop>
+						<prop val="-0.25724519700423321" Index="14"></prop>
+						<prop val="42." Index="15"></prop>
+					</Smpl>
+				</SmplList>
+				<SmplList ClssId="13"></SmplList>
+				<SmplList ClssId="14"></SmplList>
+				<SmplList ClssId="15"></SmplList>
+				<SmplList ClssId="16"></SmplList>
+			</AllClss>
+			<AllProp>
+				<PropDscrId GUID="03E04ED0-94DD-45ee-801E-14D70E6E2417" InstID="Area"></PropDscrId>
+				<PropDscrId GUID="16B7A5B4-D807-4ab1-B769-D536B3C26B20" InstID="Brightness"></PropDscrId>
+				<PropDscrId GUID="1F03F8EB-A21A-4d53-B9DA-391FFE1B804D" InstID="Compactness"></PropDscrId>
+				<PropDscrId GUID="40CC7324-96B4-409c-B786-B184C1259197" InstID="Shape index"></PropDscrId>
+				<PropDscrId GUID="44411C83-609B-4758-93D3-FF62DF246855" InstID="Mean IR"></PropDscrId>
+				<PropDscrId GUID="44411C83-609B-4758-93D3-FF62DF246855" InstID="Mean R"></PropDscrId>
+				<PropDscrId GUID="44411C83-609B-4758-93D3-FF62DF246855" InstID="Mean B"></PropDscrId>
+				<PropDscrId GUID="44411C83-609B-4758-93D3-FF62DF246855" InstID="Mean G"></PropDscrId>
+				<PropDscrId GUID="4B11667E-1449-440f-8D7B-0A4D90E62B3E" InstID="Standard deviation B"></PropDscrId>
+				<PropDscrId GUID="4B11667E-1449-440f-8D7B-0A4D90E62B3E" InstID="Standard deviation G"></PropDscrId>
+				<PropDscrId GUID="4B11667E-1449-440f-8D7B-0A4D90E62B3E" InstID="Standard deviation IR"></PropDscrId>
+				<PropDscrId GUID="4B11667E-1449-440f-8D7B-0A4D90E62B3E" InstID="Standard deviation R"></PropDscrId>
+				<PropDscrId GUID="A9590711-1F40-43c5-9F7D-D1E8F69BEB0A" InstID="GLCM Contrast (all dir.)"></PropDscrId>
+				<PropDscrId GUID="D9CC01FF-7C3D-4861-9608-38D8EB2D3CCC" InstID="Asymmetry"></PropDscrId>
+				<PropDscrId GUID="E869FC89-440F-41e4-A7DF-1E9DE9040CEC" InstID="NDVI"></PropDscrId>
+				<PropDscrId GUID="F4CD2EB0-F2FB-47fb-89A3-369FE9B58085" InstID="Border length"></PropDscrId>
+			</AllProp>
+		</Smpls>
+		<plugin-list>
+			<plugin name="eCognition Internal Export Process Algorithms" version="0.1"></plugin>
+			<plugin name="eCognition Internal Process Algorithms" version="0.1"></plugin>
+			<plugin name="eCognition Basic Process Algorithms" version="0.1"></plugin>
+		</plugin-list>
+	</ObjectDependencies>
+	<CustProcAlgrList></CustProcAlgrList>
+	<ProcessList>
+		<ProcBase Name="ClassifyCoverCurrent" bLoopChg="0" bExpand="1" bActive="1" bAutoName="0" bSubrtn="0" sComment="">
+			<LcnsInfo sLcnsId="" sPwd=""></LcnsInfo>
+			<vrblValMaxCycle>
+				<DValue value="1." type="double"></DValue>
+			</vrblValMaxCycle>
+			<Algorithm guid="A8BA5775-CC39-4194-9A6A-A64872EE1F81">
+				<Params></Params>
+			</Algorithm>
+			<Domain guid="CC9F2C30-4DB0-4ef2-B864-63560D1D6BF3">
+				<Params>
+					<DValue type="threshold" name="valThrsh"></DValue>
+					<DValue type="threshold" name="valThrsh2"></DValue>
+					<DValue value="From Parent" type="string" name="valMap"></DValue>
+				</Params>
+			</Domain>
+			<SubProc>
+				<ProcBase Name="Create Masks" bLoopChg="0" bExpand="1" bActive="1" bAutoName="0" bSubrtn="0" sComment="">
+					<LcnsInfo sLcnsId="" sPwd=""></LcnsInfo>
+					<vrblValMaxCycle>
+						<DValue value="1." type="double"></DValue>
+					</vrblValMaxCycle>
+					<Algorithm guid="A8BA5775-CC39-4194-9A6A-A64872EE1F81">
+						<Params></Params>
+					</Algorithm>
+					<Domain guid="CC9F2C30-4DB0-4ef2-B864-63560D1D6BF3">
+						<Params>
+							<DValue type="threshold" name="valThrsh"></DValue>
+							<DValue type="threshold" name="valThrsh2"></DValue>
+							<DValue value="From Parent" type="string" name="valMap"></DValue>
+						</Params>
+					</Domain>
+					<SubProc>
+						<ProcBase Name="1000 [shape:0.1 compct.:0.9] creating 'ForestPrairieMask'" bLoopChg="0" bExpand="1" bActive="1" bAutoName="1" bSubrtn="0" sComment="">
+							<LcnsInfo sLcnsId="" sPwd=""></LcnsInfo>
+							<vrblValMaxCycle>
+								<DValue value="1." type="double"></DValue>
+							</vrblValMaxCycle>
+							<Algorithm guid="6534F2E1-485B-406f-B990-350824399FA8">
+								<Params>
+									<DValue value="1" type="bool" name="bDoOverwrite"></DValue>
+									<DValue type="lvlName" name="valMapLvl">
+									<MapLvlProxy strName="ForestPrairieMask" bVrbl="0">
+									<Assignment MapLvl="1" MapName="main"></Assignment>
+									<Scope GUID="00000000-0000-0000-0000-000000000000"></Scope>
+									</MapLvlProxy>
+									</DValue>
+									<DValue value="4" type="int" name="eLvlUsage"></DValue>
+									<DValue value="3" type="int" name="iCompMode"></DValue>
+									<DValue type="vector" name="vImgLayerWghtVarOrValue">
+									<Values>
+									<DValue type="vector" indx="0">
+									<Values>
+									<DValue type="img_chnl" value="image" scope="" indx="0"></DValue>
+									<DValue value="1." type="double" indx="1"></DValue>
+									</Values>
+									</DValue>
+									</Values>
+									</DValue>
+									<DValue type="vector" name="vImgLayerWght">
+									<Values>
+									<DValue type="vector" indx="0">
+									<Values>
+									<DValue type="img_chnl" value="image" scope="" indx="0"></DValue>
+									<DValue value="1." type="double" indx="1"></DValue>
+									</Values>
+									</DValue>
+									</Values>
+									</DValue>
+									<DValue type="vector" name="vThmLayerFlags">
+									<Values></Values>
+									</DValue>
+									<DValue value="1000." type="double" name="vrblValScale"></DValue>
+									<DValue value="0.10000000000000001" type="double" name="vrblHCShape"></DValue>
+									<DValue value="0.90000000000000002" type="double" name="vrblHCArea"></DValue>
+								</Params>
+							</Algorithm>
+							<Domain guid="682A3AA1-9F4F-4dae-9E44-5015DF867712">
+								<Params>
+									<DValue value="From Parent" type="string" name="valMap"></DValue>
+									<DValue type="threshold" name="valThrsh"></DValue>
+									<DValue type="threshold" name="valThrsh2"></DValue>
+								</Params>
+							</Domain>
+							<SubProc></SubProc>
+						</ProcBase>
+						<ProcBase Name="unclassified with Mean image = 0  at  ForestPrairieMask: garbage" bLoopChg="0" bExpand="1" bActive="1" bAutoName="1" bSubrtn="0" sComment="">
+							<LcnsInfo sLcnsId="" sPwd=""></LcnsInfo>
+							<vrblValMaxCycle>
+								<DValue value="1." type="double"></DValue>
+							</vrblValMaxCycle>
+							<Algorithm guid="3AC44F21-C6B2-4804-9929-BB18BE6F2051">
+								<Params>
+									<DValue value="1" type="clssId" name="valClass"></DValue>
+								</Params>
+							</Algorithm>
+							<Domain guid="CED621BD-F4D1-4ffa-A2F6-DB2BB1913E8C">
+								<Params>
+									<DValue type="lvlName" name="valMapLvl">
+									<MapLvlProxy strName="ForestPrairieMask" bVrbl="0">
+									<Assignment MapLvl="1" MapName="main"></Assignment>
+									<Scope GUID="00000000-0000-0000-0000-000000000000"></Scope>
+									</MapLvlProxy>
+									</DValue>
+									<DValue type="vector" name="mClssFltr">
+									<Values>
+									<DValue value="Unclsfy" type="string" indx="0"></DValue>
+									<DValue value="User defined" type="string" indx="1"></DValue>
+									</Values>
+									</DValue>
+									<DValue type="threshold" name="valThrsh">
+									<TermThrsh eCmpr="5" eBaseUnit="0">
+									<PropDscrId GUID="44411C83-609B-4758-93D3-FF62DF246855" InstID="Mean image"></PropDscrId>
+									<ProcVrblValUnit>
+									<DValue value="0." type="double"></DValue>
+									</ProcVrblValUnit>
+									</TermThrsh>
+									</DValue>
+									<DValue type="threshold" name="valThrsh2"></DValue>
+									<DValue value="From Parent" type="string" name="valMap"></DValue>
+									<DValue value="From Parent" type="string" name="valROI"></DValue>
+									<DValue value="0" type="int" name="iNumMaxObj"></DValue>
+									<DValue value="4" type="int" name="iVersion"></DValue>
+									<DValue value="-1" type="int" name="iOldLvl"></DValue>
+									<DValue value="0" type="int" name="iOldDsplLvl"></DValue>
+									<DValue value="0" type="int" name="iOldDsplNumLvl"></DValue>
+								</Params>
+							</Domain>
+							<SubProc></SubProc>
+						</ProcBase>
+						<ProcBase Name="unclassified at  ForestPrairieMask: Forest" bLoopChg="0" bExpand="1" bActive="1" bAutoName="1" bSubrtn="0" sComment="">
+							<LcnsInfo sLcnsId="" sPwd=""></LcnsInfo>
+							<vrblValMaxCycle>
+								<DValue value="1." type="double"></DValue>
+							</vrblValMaxCycle>
+							<Algorithm guid="3AC44F21-C6B2-4804-9929-BB18BE6F2051">
+								<Params>
+									<DValue value="13" type="clssId" name="valClass"></DValue>
+								</Params>
+							</Algorithm>
+							<Domain guid="CED621BD-F4D1-4ffa-A2F6-DB2BB1913E8C">
+								<Params>
+									<DValue type="lvlName" name="valMapLvl">
+									<MapLvlProxy strName="ForestPrairieMask" bVrbl="0">
+									<Assignment MapLvl="1" MapName="main"></Assignment>
+									<Scope GUID="00000000-0000-0000-0000-000000000000"></Scope>
+									</MapLvlProxy>
+									</DValue>
+									<DValue type="vector" name="mClssFltr">
+									<Values>
+									<DValue value="Unclsfy" type="string" indx="0"></DValue>
+									<DValue value="User defined" type="string" indx="1"></DValue>
+									</Values>
+									</DValue>
+									<DValue type="threshold" name="valThrsh"></DValue>
+									<DValue type="threshold" name="valThrsh2"></DValue>
+									<DValue value="From Parent" type="string" name="valMap"></DValue>
+									<DValue value="From Parent" type="string" name="valROI"></DValue>
+									<DValue value="0" type="int" name="iNumMaxObj"></DValue>
+									<DValue value="4" type="int" name="iVersion"></DValue>
+									<DValue value="-1" type="int" name="iOldLvl"></DValue>
+									<DValue value="0" type="int" name="iOldDsplLvl"></DValue>
+									<DValue value="0" type="int" name="iOldDsplNumLvl"></DValue>
+								</Params>
+							</Domain>
+							<SubProc></SubProc>
+						</ProcBase>
+						<ProcBase Name="Forest at  ForestPrairieMask: export object shapes to C:\Users\mveitzel\Dropbox\Professional\ConiferEncroachment\TestingChangeDetection\WC_Forest_hist.shp" bLoopChg="0" bExpand="1" bActive="1" bAutoName="1" bSubrtn="0" sComment="">
+							<LcnsInfo sLcnsId="" sPwd=""></LcnsInfo>
+							<vrblValMaxCycle>
+								<DValue value="1." type="double"></DValue>
+							</vrblValMaxCycle>
+							<Algorithm guid="E8AAA2C4-4DCA-4684-A918-87E7C53CDC8D">
+								<Params>
+									<DValue value="1" type="int" name="eExportMode"></DValue>
+									<DValue value="SFREC_cover" type="string" name="strExportItem"></DValue>
+									<DValue value="-1" type="procVarId" name="vrblExportItem"></DValue>
+									<DValue value="C:/Users/mveitzel/Dropbox/Professional/ConiferEncroachment/TestingChangeDetection/WC_Forest_hist.shp" type="string" name="strExportPath"></DValue>
+									<DValue value="0" type="bool" name="bExportSeries"></DValue>
+									<DValue value="" type="string" name="strExportItemInfo"></DValue>
+									<DValue value="temporary" type="string" name="valExportTempLayer"></DValue>
+									<DValue type="vector" name="vColInfo">
+									<Values>
+									<DValue type="vector" indx="0">
+									<Values>
+									<DValue type="propDscrId" indx="0">
+									<PropDscrId GUID="16B7A5B4-D807-4ab1-B769-D536B3C26B20" InstID="Brightness"></PropDscrId>
+									</DValue>
+									<DValue value="Brightness" type="string" indx="1"></DValue>
+									<DValue value="0" type="int" indx="2"></DValue>
+									<DValue value="-1" type="int" indx="3"></DValue>
+									<DValue value="-1" type="int" indx="4"></DValue>
+									</Values>
+									</DValue>
+									<DValue type="vector" indx="1">
+									<Values>
+									<DValue type="propDscrId" indx="0">
+									<PropDscrId GUID="2ECAB4E2-FCE5-4471-86D1-71A09D4892AE" InstID="Class name(0,0)"></PropDscrId>
+									</DValue>
+									<DValue value="Class_name" type="string" indx="1"></DValue>
+									<DValue value="0" type="int" indx="2"></DValue>
+									<DValue value="-1" type="int" indx="3"></DValue>
+									<DValue value="-1" type="int" indx="4"></DValue>
+									</Values>
+									</DValue>
+									<DValue type="vector" indx="2">
+									<Values>
+									<DValue type="propDscrId" indx="0">
+									<PropDscrId GUID="44411C83-609B-4758-93D3-FF62DF246855" InstID="Mean B"></PropDscrId>
+									</DValue>
+									<DValue value="Mean_B" type="string" indx="1"></DValue>
+									<DValue value="0" type="int" indx="2"></DValue>
+									<DValue value="-1" type="int" indx="3"></DValue>
+									<DValue value="-1" type="int" indx="4"></DValue>
+									</Values>
+									</DValue>
+									<DValue type="vector" indx="3">
+									<Values>
+									<DValue type="propDscrId" indx="0">
+									<PropDscrId GUID="44411C83-609B-4758-93D3-FF62DF246855" InstID="Mean G"></PropDscrId>
+									</DValue>
+									<DValue value="Mean_G" type="string" indx="1"></DValue>
+									<DValue value="0" type="int" indx="2"></DValue>
+									<DValue value="-1" type="int" indx="3"></DValue>
+									<DValue value="-1" type="int" indx="4"></DValue>
+									</Values>
+									</DValue>
+									<DValue type="vector" indx="4">
+									<Values>
+									<DValue type="propDscrId" indx="0">
+									<PropDscrId GUID="44411C83-609B-4758-93D3-FF62DF246855" InstID="Mean IR"></PropDscrId>
+									</DValue>
+									<DValue value="Mean_IR" type="string" indx="1"></DValue>
+									<DValue value="0" type="int" indx="2"></DValue>
+									<DValue value="-1" type="int" indx="3"></DValue>
+									<DValue value="-1" type="int" indx="4"></DValue>
+									</Values>
+									</DValue>
+									<DValue type="vector" indx="5">
+									<Values>
+									<DValue type="propDscrId" indx="0">
+									<PropDscrId GUID="44411C83-609B-4758-93D3-FF62DF246855" InstID="Mean R"></PropDscrId>
+									</DValue>
+									<DValue value="Mean_R" type="string" indx="1"></DValue>
+									<DValue value="0" type="int" indx="2"></DValue>
+									<DValue value="-1" type="int" indx="3"></DValue>
+									<DValue value="-1" type="int" indx="4"></DValue>
+									</Values>
+									</DValue>
+									<DValue type="vector" indx="6">
+									<Values>
+									<DValue type="propDscrId" indx="0">
+									<PropDscrId GUID="E869FC89-440F-41e4-A7DF-1E9DE9040CEC" InstID="NDVI"></PropDscrId>
+									</DValue>
+									<DValue value="NDVI" type="string" indx="1"></DValue>
+									<DValue value="0" type="int" indx="2"></DValue>
+									<DValue value="-1" type="int" indx="3"></DValue>
+									<DValue value="-1" type="int" indx="4"></DValue>
+									</Values>
+									</DValue>
+									<DValue type="vector" indx="7">
+									<Values>
+									<DValue type="propDscrId" indx="0">
+									<PropDscrId GUID="4B11667E-1449-440f-8D7B-0A4D90E62B3E" InstID="Standard deviation IR"></PropDscrId>
+									</DValue>
+									<DValue value="Standard_d" type="string" indx="1"></DValue>
+									<DValue value="0" type="int" indx="2"></DValue>
+									<DValue value="-1" type="int" indx="3"></DValue>
+									<DValue value="-1" type="int" indx="4"></DValue>
+									</Values>
+									</DValue>
+									<DValue type="vector" indx="8">
+									<Values>
+									<DValue type="propDscrId" indx="0">
+									<PropDscrId GUID="4B11667E-1449-440f-8D7B-0A4D90E62B3E" InstID="Standard deviation R"></PropDscrId>
+									</DValue>
+									<DValue value="Standard_d" type="string" indx="1"></DValue>
+									<DValue value="0" type="int" indx="2"></DValue>
+									<DValue value="-1" type="int" indx="3"></DValue>
+									<DValue value="-1" type="int" indx="4"></DValue>
+									</Values>
+									</DValue>
+									<DValue type="vector" indx="9">
+									<Values>
+									<DValue type="propDscrId" indx="0">
+									<PropDscrId GUID="4B11667E-1449-440f-8D7B-0A4D90E62B3E" InstID="Standard deviation G"></PropDscrId>
+									</DValue>
+									<DValue value="Standard_d" type="string" indx="1"></DValue>
+									<DValue value="0" type="int" indx="2"></DValue>
+									<DValue value="-1" type="int" indx="3"></DValue>
+									<DValue value="-1" type="int" indx="4"></DValue>
+									</Values>
+									</DValue>
+									<DValue type="vector" indx="10">
+									<Values>
+									<DValue type="propDscrId" indx="0">
+									<PropDscrId GUID="4B11667E-1449-440f-8D7B-0A4D90E62B3E" InstID="Standard deviation B"></PropDscrId>
+									</DValue>
+									<DValue value="Standard_d" type="string" indx="1"></DValue>
+									<DValue value="0" type="int" indx="2"></DValue>
+									<DValue value="-1" type="int" indx="3"></DValue>
+									<DValue value="-1" type="int" indx="4"></DValue>
+									</Values>
+									</DValue>
+									</Values>
+									</DValue>
+									<DValue value="Brightness; Class_name; Mean_B; Mean_G; Mean_IR; Mean_R; NDVI; Standard_d; Standard_d; Standard_d; Standard_d" type="string" name="EditAttrTbl"></DValue>
+									<DValue value="3" type="int" name="eGeomType"></DValue>
+									<DValue value="5" type="int" name="eExprtType"></DValue>
+									<DValue value="0" type="bool" name="bUse3DCoords"></DValue>
+									<DValue value="1" type="bool" name="bShpUseGeocoding"></DValue>
+									<DValue value="0" type="int" name="eCoordOrient"></DValue>
+									<DValue value="SHP" type="string" name="eExprtFormat"></DValue>
+									<DValue value="" type="string" name="featClassName"></DValue>
+									<DValue type="img_chnl" value="" name="pRefChnl"></DValue>
+									<DValue value="{:ArcSDE.Connect.Dir}\default.das" type="string" name="exprtStorageLocFile"></DValue>
+									<DValue value="400000,4000000" type="string" name="spatDomainOffset"></DValue>
+									<DValue value="1000" type="string" name="spatDomainPrec"></DValue>
+								</Params>
+							</Algorithm>
+							<Domain guid="CED621BD-F4D1-4ffa-A2F6-DB2BB1913E8C">
+								<Params>
+									<DValue type="lvlName" name="valMapLvl">
+									<MapLvlProxy strName="ForestPrairieMask" bVrbl="0">
+									<Assignment MapLvl="1" MapName="main"></Assignment>
+									<Scope GUID="00000000-0000-0000-0000-000000000000"></Scope>
+									</MapLvlProxy>
+									</DValue>
+									<DValue type="vector" name="mClssFltr">
+									<Values>
+									<DValue value="13" type="clssId" indx="0"></DValue>
+									<DValue value="User defined" type="string" indx="1"></DValue>
+									</Values>
+									</DValue>
+									<DValue type="threshold" name="valThrsh"></DValue>
+									<DValue type="threshold" name="valThrsh2"></DValue>
+									<DValue value="From Parent" type="string" name="valMap"></DValue>
+									<DValue value="From Parent" type="string" name="valROI"></DValue>
+									<DValue value="0" type="int" name="iNumMaxObj"></DValue>
+									<DValue value="4" type="int" name="iVersion"></DValue>
+									<DValue value="-1" type="int" name="iOldLvl"></DValue>
+									<DValue value="0" type="int" name="iOldDsplLvl"></DValue>
+									<DValue value="0" type="int" name="iOldDsplNumLvl"></DValue>
+								</Params>
+							</Domain>
+							<SubProc></SubProc>
+						</ProcBase>
+					</SubProc>
+				</ProcBase>
+				<ProcBase Name="MultiThreshold within masks" bLoopChg="0" bExpand="1" bActive="1" bAutoName="0" bSubrtn="0" sComment="">
+					<LcnsInfo sLcnsId="" sPwd=""></LcnsInfo>
+					<vrblValMaxCycle>
+						<DValue value="1." type="double"></DValue>
+					</vrblValMaxCycle>
+					<Algorithm guid="A8BA5775-CC39-4194-9A6A-A64872EE1F81">
+						<Params></Params>
+					</Algorithm>
+					<Domain guid="CC9F2C30-4DB0-4ef2-B864-63560D1D6BF3">
+						<Params>
+							<DValue type="threshold" name="valThrsh"></DValue>
+							<DValue type="threshold" name="valThrsh2"></DValue>
+							<DValue value="From Parent" type="string" name="valMap"></DValue>
+						</Params>
+					</Domain>
+					<SubProc>
+						<ProcBase Name="Forest at  ForestPrairieMask: Cover &lt;= 175 &lt; Grass on image" bLoopChg="0" bExpand="1" bActive="1" bAutoName="1" bSubrtn="0" sComment="">
+							<LcnsInfo sLcnsId="" sPwd=""></LcnsInfo>
+							<vrblValMaxCycle>
+								<DValue value="1." type="double"></DValue>
+							</vrblValMaxCycle>
+							<Algorithm guid="1AB8761A-C1D1-47a7-B608-A3A74C15DAAB">
+								<Params>
+									<DValue type="lvlName" name="valMapLvl"></DValue>
+									<DValue value="1" type="bool" name="bDoOverwrite"></DValue>
+									<DValue type="img_chnl" value="image" scope="" name="valChnl_1"></DValue>
+									<DValue value="1" type="bool" name="bConnectedOnly"></DValue>
+									<DValue value="0" type="bool" name="bCompatibV100"></DValue>
+									<DValue value="1." type="double" name="vrblMinObjSize"></DValue>
+									<DValue value="2" type="clssId" name="dmiClss1"></DValue>
+									<DValue value="175." type="double" name="valThrs1"></DValue>
+									<DValue value="6" type="clssId" name="dmiClss2"></DValue>
+									<DValue value="-1" type="procVarId" name="valThrs2"></DValue>
+									<DValue value="-1" type="clssId" name="dmiClss3"></DValue>
+									<DValue value="-1" type="procVarId" name="valThrs3"></DValue>
+									<DValue value="-1" type="clssId" name="dmiClss4"></DValue>
+									<DValue value="-1" type="procVarId" name="valThrs4"></DValue>
+									<DValue value="-1" type="clssId" name="dmiClss5"></DValue>
+									<DValue value="-1" type="procVarId" name="valThrs5"></DValue>
+									<DValue value="-1" type="clssId" name="dmiClss6"></DValue>
+									<DValue value="-1" type="procVarId" name="valThrs6"></DValue>
+									<DValue value="-1" type="clssId" name="dmiClss7"></DValue>
+									<DValue value="-1" type="procVarId" name="valThrs7"></DValue>
+									<DValue value="-1" type="clssId" name="dmiClss8"></DValue>
+									<DValue value="-1" type="procVarId" name="valThrs8"></DValue>
+									<DValue value="-1" type="clssId" name="dmiClss9"></DValue>
+									<DValue value="-1" type="procVarId" name="valThrs9"></DValue>
+									<DValue value="-1" type="clssId" name="dmiClss10"></DValue>
+									<DValue value="-1" type="procVarId" name="valThrs10"></DValue>
+									<DValue value="-1" type="clssId" name="dmiClss11"></DValue>
+									<DValue value="-1" type="procVarId" name="valThrs11"></DValue>
+									<DValue value="-1" type="clssId" name="dmiClss12"></DValue>
+									<DValue value="-1" type="procVarId" name="valThrs12"></DValue>
+									<DValue value="-1" type="clssId" name="dmiClss13"></DValue>
+									<DValue value="-1" type="procVarId" name="valThrs13"></DValue>
+									<DValue value="-1" type="clssId" name="dmiClss14"></DValue>
+									<DValue value="-1" type="procVarId" name="valThrs14"></DValue>
+									<DValue value="-1" type="clssId" name="dmiClss15"></DValue>
+									<DValue value="-1" type="procVarId" name="valThrs15"></DValue>
+									<DValue value="-1" type="clssId" name="dmiClss16"></DValue>
+								</Params>
+							</Algorithm>
+							<Domain guid="CED621BD-F4D1-4ffa-A2F6-DB2BB1913E8C">
+								<Params>
+									<DValue type="lvlName" name="valMapLvl">
+									<MapLvlProxy strName="ForestPrairieMask" bVrbl="0">
+									<Assignment MapLvl="1" MapName="main"></Assignment>
+									<Scope GUID="00000000-0000-0000-0000-000000000000"></Scope>
+									</MapLvlProxy>
+									</DValue>
+									<DValue type="vector" name="mClssFltr">
+									<Values>
+									<DValue value="13" type="clssId" indx="0"></DValue>
+									<DValue value="User defined" type="string" indx="1"></DValue>
+									</Values>
+									</DValue>
+									<DValue type="threshold" name="valThrsh"></DValue>
+									<DValue type="threshold" name="valThrsh2"></DValue>
+									<DValue value="From Parent" type="string" name="valMap"></DValue>
+									<DValue value="From Parent" type="string" name="valROI"></DValue>
+									<DValue value="0" type="int" name="iNumMaxObj"></DValue>
+									<DValue value="4" type="int" name="iVersion"></DValue>
+									<DValue value="-1" type="int" name="iOldLvl"></DValue>
+									<DValue value="0" type="int" name="iOldDsplLvl"></DValue>
+									<DValue value="0" type="int" name="iOldDsplNumLvl"></DValue>
+								</Params>
+							</Domain>
+							<SubProc></SubProc>
+						</ProcBase>
+						<ProcBase Name="Grass with Area &lt; 5 Pxl at  ForestPrairieMask: Cover" bLoopChg="0" bExpand="1" bActive="1" bAutoName="1" bSubrtn="0" sComment="">
+							<LcnsInfo sLcnsId="" sPwd=""></LcnsInfo>
+							<vrblValMaxCycle>
+								<DValue value="1." type="double"></DValue>
+							</vrblValMaxCycle>
+							<Algorithm guid="3AC44F21-C6B2-4804-9929-BB18BE6F2051">
+								<Params>
+									<DValue value="2" type="clssId" name="valClass"></DValue>
+								</Params>
+							</Algorithm>
+							<Domain guid="CED621BD-F4D1-4ffa-A2F6-DB2BB1913E8C">
+								<Params>
+									<DValue type="lvlName" name="valMapLvl">
+									<MapLvlProxy strName="ForestPrairieMask" bVrbl="0">
+									<Assignment MapLvl="1" MapName="main"></Assignment>
+									<Scope GUID="00000000-0000-0000-0000-000000000000"></Scope>
+									</MapLvlProxy>
+									</DValue>
+									<DValue type="vector" name="mClssFltr">
+									<Values>
+									<DValue value="6" type="clssId" indx="0"></DValue>
+									<DValue value="User defined" type="string" indx="1"></DValue>
+									</Values>
+									</DValue>
+									<DValue type="threshold" name="valThrsh">
+									<TermThrsh eCmpr="2" eBaseUnit="1">
+									<PropDscrId GUID="03E04ED0-94DD-45ee-801E-14D70E6E2417" InstID="Area"></PropDscrId>
+									<ProcVrblValPxl>
+									<DValue value="5." type="double"></DValue>
+									</ProcVrblValPxl>
+									</TermThrsh>
+									</DValue>
+									<DValue type="threshold" name="valThrsh2"></DValue>
+									<DValue value="From Parent" type="string" name="valMap"></DValue>
+									<DValue value="From Parent" type="string" name="valROI"></DValue>
+									<DValue value="0" type="int" name="iNumMaxObj"></DValue>
+									<DValue value="4" type="int" name="iVersion"></DValue>
+									<DValue value="-1" type="int" name="iOldLvl"></DValue>
+									<DValue value="0" type="int" name="iOldDsplLvl"></DValue>
+									<DValue value="0" type="int" name="iOldDsplNumLvl"></DValue>
+								</Params>
+							</Domain>
+							<SubProc></SubProc>
+						</ProcBase>
+						<ProcBase Name="Grass at  ForestPrairieMask: export object shapes to C:\Users\mveitzel\Dropbox\Professional\ConiferEncroachment\TestingChangeDetection\WC_Forest_hist_Grass.shp" bLoopChg="0" bExpand="1" bActive="1" bAutoName="1" bSubrtn="0" sComment="">
+							<LcnsInfo sLcnsId="" sPwd=""></LcnsInfo>
+							<vrblValMaxCycle>
+								<DValue value="1." type="double"></DValue>
+							</vrblValMaxCycle>
+							<Algorithm guid="E8AAA2C4-4DCA-4684-A918-87E7C53CDC8D">
+								<Params>
+									<DValue value="1" type="int" name="eExportMode"></DValue>
+									<DValue value="SFREC_cover001" type="string" name="strExportItem"></DValue>
+									<DValue value="-1" type="procVarId" name="vrblExportItem"></DValue>
+									<DValue value="C:/Users/mveitzel/Dropbox/Professional/ConiferEncroachment/TestingChangeDetection/WC_Forest_hist_Grass.shp" type="string" name="strExportPath"></DValue>
+									<DValue value="0" type="bool" name="bExportSeries"></DValue>
+									<DValue value="" type="string" name="strExportItemInfo"></DValue>
+									<DValue value="temporary" type="string" name="valExportTempLayer"></DValue>
+									<DValue type="vector" name="vColInfo">
+									<Values>
+									<DValue type="vector" indx="0">
+									<Values>
+									<DValue type="propDscrId" indx="0">
+									<PropDscrId GUID="16B7A5B4-D807-4ab1-B769-D536B3C26B20" InstID="Brightness"></PropDscrId>
+									</DValue>
+									<DValue value="Brightness" type="string" indx="1"></DValue>
+									<DValue value="0" type="int" indx="2"></DValue>
+									<DValue value="-1" type="int" indx="3"></DValue>
+									<DValue value="-1" type="int" indx="4"></DValue>
+									</Values>
+									</DValue>
+									<DValue type="vector" indx="1">
+									<Values>
+									<DValue type="propDscrId" indx="0">
+									<PropDscrId GUID="2ECAB4E2-FCE5-4471-86D1-71A09D4892AE" InstID="Class name(0,0)"></PropDscrId>
+									</DValue>
+									<DValue value="Class_name" type="string" indx="1"></DValue>
+									<DValue value="0" type="int" indx="2"></DValue>
+									<DValue value="-1" type="int" indx="3"></DValue>
+									<DValue value="-1" type="int" indx="4"></DValue>
+									</Values>
+									</DValue>
+									<DValue type="vector" indx="2">
+									<Values>
+									<DValue type="propDscrId" indx="0">
+									<PropDscrId GUID="44411C83-609B-4758-93D3-FF62DF246855" InstID="Mean B"></PropDscrId>
+									</DValue>
+									<DValue value="Mean_B" type="string" indx="1"></DValue>
+									<DValue value="0" type="int" indx="2"></DValue>
+									<DValue value="-1" type="int" indx="3"></DValue>
+									<DValue value="-1" type="int" indx="4"></DValue>
+									</Values>
+									</DValue>
+									<DValue type="vector" indx="3">
+									<Values>
+									<DValue type="propDscrId" indx="0">
+									<PropDscrId GUID="44411C83-609B-4758-93D3-FF62DF246855" InstID="Mean G"></PropDscrId>
+									</DValue>
+									<DValue value="Mean_G" type="string" indx="1"></DValue>
+									<DValue value="0" type="int" indx="2"></DValue>
+									<DValue value="-1" type="int" indx="3"></DValue>
+									<DValue value="-1" type="int" indx="4"></DValue>
+									</Values>
+									</DValue>
+									<DValue type="vector" indx="4">
+									<Values>
+									<DValue type="propDscrId" indx="0">
+									<PropDscrId GUID="44411C83-609B-4758-93D3-FF62DF246855" InstID="Mean IR"></PropDscrId>
+									</DValue>
+									<DValue value="Mean_IR" type="string" indx="1"></DValue>
+									<DValue value="0" type="int" indx="2"></DValue>
+									<DValue value="-1" type="int" indx="3"></DValue>
+									<DValue value="-1" type="int" indx="4"></DValue>
+									</Values>
+									</DValue>
+									<DValue type="vector" indx="5">
+									<Values>
+									<DValue type="propDscrId" indx="0">
+									<PropDscrId GUID="44411C83-609B-4758-93D3-FF62DF246855" InstID="Mean R"></PropDscrId>
+									</DValue>
+									<DValue value="Mean_R" type="string" indx="1"></DValue>
+									<DValue value="0" type="int" indx="2"></DValue>
+									<DValue value="-1" type="int" indx="3"></DValue>
+									<DValue value="-1" type="int" indx="4"></DValue>
+									</Values>
+									</DValue>
+									<DValue type="vector" indx="6">
+									<Values>
+									<DValue type="propDscrId" indx="0">
+									<PropDscrId GUID="E869FC89-440F-41e4-A7DF-1E9DE9040CEC" InstID="NDVI"></PropDscrId>
+									</DValue>
+									<DValue value="NDVI" type="string" indx="1"></DValue>
+									<DValue value="0" type="int" indx="2"></DValue>
+									<DValue value="-1" type="int" indx="3"></DValue>
+									<DValue value="-1" type="int" indx="4"></DValue>
+									</Values>
+									</DValue>
+									<DValue type="vector" indx="7">
+									<Values>
+									<DValue type="propDscrId" indx="0">
+									<PropDscrId GUID="4B11667E-1449-440f-8D7B-0A4D90E62B3E" InstID="Standard deviation IR"></PropDscrId>
+									</DValue>
+									<DValue value="Standard_d" type="string" indx="1"></DValue>
+									<DValue value="0" type="int" indx="2"></DValue>
+									<DValue value="-1" type="int" indx="3"></DValue>
+									<DValue value="-1" type="int" indx="4"></DValue>
+									</Values>
+									</DValue>
+									<DValue type="vector" indx="8">
+									<Values>
+									<DValue type="propDscrId" indx="0">
+									<PropDscrId GUID="4B11667E-1449-440f-8D7B-0A4D90E62B3E" InstID="Standard deviation R"></PropDscrId>
+									</DValue>
+									<DValue value="Standard_d" type="string" indx="1"></DValue>
+									<DValue value="0" type="int" indx="2"></DValue>
+									<DValue value="-1" type="int" indx="3"></DValue>
+									<DValue value="-1" type="int" indx="4"></DValue>
+									</Values>
+									</DValue>
+									<DValue type="vector" indx="9">
+									<Values>
+									<DValue type="propDscrId" indx="0">
+									<PropDscrId GUID="4B11667E-1449-440f-8D7B-0A4D90E62B3E" InstID="Standard deviation G"></PropDscrId>
+									</DValue>
+									<DValue value="Standard_d" type="string" indx="1"></DValue>
+									<DValue value="0" type="int" indx="2"></DValue>
+									<DValue value="-1" type="int" indx="3"></DValue>
+									<DValue value="-1" type="int" indx="4"></DValue>
+									</Values>
+									</DValue>
+									<DValue type="vector" indx="10">
+									<Values>
+									<DValue type="propDscrId" indx="0">
+									<PropDscrId GUID="4B11667E-1449-440f-8D7B-0A4D90E62B3E" InstID="Standard deviation B"></PropDscrId>
+									</DValue>
+									<DValue value="Standard_d" type="string" indx="1"></DValue>
+									<DValue value="0" type="int" indx="2"></DValue>
+									<DValue value="-1" type="int" indx="3"></DValue>
+									<DValue value="-1" type="int" indx="4"></DValue>
+									</Values>
+									</DValue>
+									</Values>
+									</DValue>
+									<DValue value="Brightness; Class_name; Mean_B; Mean_G; Mean_IR; Mean_R; NDVI; Standard_d; Standard_d; Standard_d; Standard_d" type="string" name="EditAttrTbl"></DValue>
+									<DValue value="3" type="int" name="eGeomType"></DValue>
+									<DValue value="5" type="int" name="eExprtType"></DValue>
+									<DValue value="0" type="bool" name="bUse3DCoords"></DValue>
+									<DValue value="1" type="bool" name="bShpUseGeocoding"></DValue>
+									<DValue value="0" type="int" name="eCoordOrient"></DValue>
+									<DValue value="SHP" type="string" name="eExprtFormat"></DValue>
+									<DValue value="" type="string" name="featClassName"></DValue>
+									<DValue type="img_chnl" value="" name="pRefChnl"></DValue>
+									<DValue value="{:ArcSDE.Connect.Dir}\default.das" type="string" name="exprtStorageLocFile"></DValue>
+									<DValue value="400000,4000000" type="string" name="spatDomainOffset"></DValue>
+									<DValue value="1000" type="string" name="spatDomainPrec"></DValue>
+								</Params>
+							</Algorithm>
+							<Domain guid="CED621BD-F4D1-4ffa-A2F6-DB2BB1913E8C">
+								<Params>
+									<DValue type="lvlName" name="valMapLvl">
+									<MapLvlProxy strName="ForestPrairieMask" bVrbl="0">
+									<Assignment MapLvl="1" MapName="main"></Assignment>
+									<Scope GUID="00000000-0000-0000-0000-000000000000"></Scope>
+									</MapLvlProxy>
+									</DValue>
+									<DValue type="vector" name="mClssFltr">
+									<Values>
+									<DValue value="6" type="clssId" indx="0"></DValue>
+									<DValue value="User defined" type="string" indx="1"></DValue>
+									</Values>
+									</DValue>
+									<DValue type="threshold" name="valThrsh"></DValue>
+									<DValue type="threshold" name="valThrsh2"></DValue>
+									<DValue value="From Parent" type="string" name="valMap"></DValue>
+									<DValue value="From Parent" type="string" name="valROI"></DValue>
+									<DValue value="0" type="int" name="iNumMaxObj"></DValue>
+									<DValue value="4" type="int" name="iVersion"></DValue>
+									<DValue value="-1" type="int" name="iOldLvl"></DValue>
+									<DValue value="0" type="int" name="iOldDsplLvl"></DValue>
+									<DValue value="0" type="int" name="iOldDsplNumLvl"></DValue>
+								</Params>
+							</Domain>
+							<SubProc></SubProc>
+						</ProcBase>
+					</SubProc>
+				</ProcBase>
+				<ProcBase Name="Export" bLoopChg="0" bExpand="1" bActive="1" bAutoName="0" bSubrtn="0" sComment="">
+					<LcnsInfo sLcnsId="" sPwd=""></LcnsInfo>
+					<vrblValMaxCycle>
+						<DValue value="1." type="double"></DValue>
+					</vrblValMaxCycle>
+					<Algorithm guid="A8BA5775-CC39-4194-9A6A-A64872EE1F81">
+						<Params></Params>
+					</Algorithm>
+					<Domain guid="CC9F2C30-4DB0-4ef2-B864-63560D1D6BF3">
+						<Params>
+							<DValue type="threshold" name="valThrsh"></DValue>
+							<DValue type="threshold" name="valThrsh2"></DValue>
+							<DValue value="From Parent" type="string" name="valMap"></DValue>
+						</Params>
+					</Domain>
+					<SubProc>
+						<ProcBase Name="BareGround, Cover, Grass at  ForestPrairieMask: export object shapes to C:\Users\mveitzel\Dropbox\ConiferEncroachmentDataShared\Site_WC\Classifications\WC_1948_Cover" bLoopChg="0" bExpand="1" bActive="1" bAutoName="1" bSubrtn="0" sComment="">
+							<LcnsInfo sLcnsId="" sPwd=""></LcnsInfo>
+							<vrblValMaxCycle>
+								<DValue value="1." type="double"></DValue>
+							</vrblValMaxCycle>
+							<Algorithm guid="E8AAA2C4-4DCA-4684-A918-87E7C53CDC8D">
+								<Params>
+									<DValue value="1" type="int" name="eExportMode"></DValue>
+									<DValue value="IB_2009_Cover" type="string" name="strExportItem"></DValue>
+									<DValue value="-1" type="procVarId" name="vrblExportItem"></DValue>
+									<DValue value="C:\Users\mveitzel\Dropbox\ConiferEncroachmentDataShared\Site_WC\Classifications\WC_1948_Cover" type="string" name="strExportPath"></DValue>
+									<DValue value="0" type="bool" name="bExportSeries"></DValue>
+									<DValue value="" type="string" name="strExportItemInfo"></DValue>
+									<DValue value="temporary" type="string" name="valExportTempLayer"></DValue>
+									<DValue type="vector" name="vColInfo">
+									<Values>
+									<DValue type="vector" indx="0">
+									<Values>
+									<DValue type="propDscrId" indx="0">
+									<PropDscrId GUID="16B7A5B4-D807-4ab1-B769-D536B3C26B20" InstID="Brightness"></PropDscrId>
+									</DValue>
+									<DValue value="Brightness" type="string" indx="1"></DValue>
+									<DValue value="0" type="int" indx="2"></DValue>
+									<DValue value="-1" type="int" indx="3"></DValue>
+									<DValue value="-1" type="int" indx="4"></DValue>
+									</Values>
+									</DValue>
+									<DValue type="vector" indx="1">
+									<Values>
+									<DValue type="propDscrId" indx="0">
+									<PropDscrId GUID="2ECAB4E2-FCE5-4471-86D1-71A09D4892AE" InstID="Class name(0,0)"></PropDscrId>
+									</DValue>
+									<DValue value="Class_name" type="string" indx="1"></DValue>
+									<DValue value="0" type="int" indx="2"></DValue>
+									<DValue value="-1" type="int" indx="3"></DValue>
+									<DValue value="-1" type="int" indx="4"></DValue>
+									</Values>
+									</DValue>
+									<DValue type="vector" indx="2">
+									<Values>
+									<DValue type="propDscrId" indx="0">
+									<PropDscrId GUID="7F30AE70-0DDD-483c-A693-7698C3CB96FF" InstID="Existence of super objects Prairie (1)"></PropDscrId>
+									</DValue>
+									<DValue value="Existence_" type="string" indx="1"></DValue>
+									<DValue value="0" type="int" indx="2"></DValue>
+									<DValue value="-1" type="int" indx="3"></DValue>
+									<DValue value="-1" type="int" indx="4"></DValue>
+									</Values>
+									</DValue>
+									<DValue type="vector" indx="3">
+									<Values>
+									<DValue type="propDscrId" indx="0">
+									<PropDscrId GUID="7F30AE70-0DDD-483c-A693-7698C3CB96FF" InstID="Existence of super objects garbage (1)"></PropDscrId>
+									</DValue>
+									<DValue value="Existence_" type="string" indx="1"></DValue>
+									<DValue value="0" type="int" indx="2"></DValue>
+									<DValue value="-1" type="int" indx="3"></DValue>
+									<DValue value="-1" type="int" indx="4"></DValue>
+									</Values>
+									</DValue>
+									<DValue type="vector" indx="4">
+									<Values>
+									<DValue type="propDscrId" indx="0">
+									<PropDscrId GUID="7F30AE70-0DDD-483c-A693-7698C3CB96FF" InstID="Existence of super objects Forest (1)"></PropDscrId>
+									</DValue>
+									<DValue value="Existence_" type="string" indx="1"></DValue>
+									<DValue value="0" type="int" indx="2"></DValue>
+									<DValue value="-1" type="int" indx="3"></DValue>
+									<DValue value="-1" type="int" indx="4"></DValue>
+									</Values>
+									</DValue>
+									<DValue type="vector" indx="5">
+									<Values>
+									<DValue type="propDscrId" indx="0">
+									<PropDscrId GUID="44411C83-609B-4758-93D3-FF62DF246855" InstID="Mean B"></PropDscrId>
+									</DValue>
+									<DValue value="Mean_B" type="string" indx="1"></DValue>
+									<DValue value="0" type="int" indx="2"></DValue>
+									<DValue value="-1" type="int" indx="3"></DValue>
+									<DValue value="-1" type="int" indx="4"></DValue>
+									</Values>
+									</DValue>
+									<DValue type="vector" indx="6">
+									<Values>
+									<DValue type="propDscrId" indx="0">
+									<PropDscrId GUID="44411C83-609B-4758-93D3-FF62DF246855" InstID="Mean G"></PropDscrId>
+									</DValue>
+									<DValue value="Mean_G" type="string" indx="1"></DValue>
+									<DValue value="0" type="int" indx="2"></DValue>
+									<DValue value="-1" type="int" indx="3"></DValue>
+									<DValue value="-1" type="int" indx="4"></DValue>
+									</Values>
+									</DValue>
+									<DValue type="vector" indx="7">
+									<Values>
+									<DValue type="propDscrId" indx="0">
+									<PropDscrId GUID="44411C83-609B-4758-93D3-FF62DF246855" InstID="Mean IR"></PropDscrId>
+									</DValue>
+									<DValue value="Mean_IR" type="string" indx="1"></DValue>
+									<DValue value="0" type="int" indx="2"></DValue>
+									<DValue value="-1" type="int" indx="3"></DValue>
+									<DValue value="-1" type="int" indx="4"></DValue>
+									</Values>
+									</DValue>
+									<DValue type="vector" indx="8">
+									<Values>
+									<DValue type="propDscrId" indx="0">
+									<PropDscrId GUID="44411C83-609B-4758-93D3-FF62DF246855" InstID="Mean R"></PropDscrId>
+									</DValue>
+									<DValue value="Mean_R" type="string" indx="1"></DValue>
+									<DValue value="0" type="int" indx="2"></DValue>
+									<DValue value="-1" type="int" indx="3"></DValue>
+									<DValue value="-1" type="int" indx="4"></DValue>
+									</Values>
+									</DValue>
+									<DValue type="vector" indx="9">
+									<Values>
+									<DValue type="propDscrId" indx="0">
+									<PropDscrId GUID="E869FC89-440F-41e4-A7DF-1E9DE9040CEC" InstID="NDVI"></PropDscrId>
+									</DValue>
+									<DValue value="NDVI" type="string" indx="1"></DValue>
+									<DValue value="0" type="int" indx="2"></DValue>
+									<DValue value="-1" type="int" indx="3"></DValue>
+									<DValue value="-1" type="int" indx="4"></DValue>
+									</Values>
+									</DValue>
+									<DValue type="vector" indx="10">
+									<Values>
+									<DValue type="propDscrId" indx="0">
+									<PropDscrId GUID="4B11667E-1449-440f-8D7B-0A4D90E62B3E" InstID="Standard deviation IR"></PropDscrId>
+									</DValue>
+									<DValue value="Standard_d" type="string" indx="1"></DValue>
+									<DValue value="0" type="int" indx="2"></DValue>
+									<DValue value="-1" type="int" indx="3"></DValue>
+									<DValue value="-1" type="int" indx="4"></DValue>
+									</Values>
+									</DValue>
+									<DValue type="vector" indx="11">
+									<Values>
+									<DValue type="propDscrId" indx="0">
+									<PropDscrId GUID="4B11667E-1449-440f-8D7B-0A4D90E62B3E" InstID="Standard deviation B"></PropDscrId>
+									</DValue>
+									<DValue value="Standard_d" type="string" indx="1"></DValue>
+									<DValue value="0" type="int" indx="2"></DValue>
+									<DValue value="-1" type="int" indx="3"></DValue>
+									<DValue value="-1" type="int" indx="4"></DValue>
+									</Values>
+									</DValue>
+									<DValue type="vector" indx="12">
+									<Values>
+									<DValue type="propDscrId" indx="0">
+									<PropDscrId GUID="4B11667E-1449-440f-8D7B-0A4D90E62B3E" InstID="Standard deviation G"></PropDscrId>
+									</DValue>
+									<DValue value="Standard_d" type="string" indx="1"></DValue>
+									<DValue value="0" type="int" indx="2"></DValue>
+									<DValue value="-1" type="int" indx="3"></DValue>
+									<DValue value="-1" type="int" indx="4"></DValue>
+									</Values>
+									</DValue>
+									<DValue type="vector" indx="13">
+									<Values>
+									<DValue type="propDscrId" indx="0">
+									<PropDscrId GUID="4B11667E-1449-440f-8D7B-0A4D90E62B3E" InstID="Standard deviation R"></PropDscrId>
+									</DValue>
+									<DValue value="Standard_d" type="string" indx="1"></DValue>
+									<DValue value="0" type="int" indx="2"></DValue>
+									<DValue value="-1" type="int" indx="3"></DValue>
+									<DValue value="-1" type="int" indx="4"></DValue>
+									</Values>
+									</DValue>
+									</Values>
+									</DValue>
+									<DValue value="Brightness; Class_name; Existence_; Existence_; Existence_; Mean_B; Mean_G; Mean_IR; Mean_R; NDVI; Standard_d; Standard_d; Standard_d; Standard_d" type="string" name="EditAttrTbl"></DValue>
+									<DValue value="3" type="int" name="eGeomType"></DValue>
+									<DValue value="5" type="int" name="eExprtType"></DValue>
+									<DValue value="0" type="bool" name="bUse3DCoords"></DValue>
+									<DValue value="1" type="bool" name="bShpUseGeocoding"></DValue>
+									<DValue value="0" type="int" name="eCoordOrient"></DValue>
+									<DValue value="SHP" type="string" name="eExprtFormat"></DValue>
+									<DValue value="" type="string" name="featClassName"></DValue>
+									<DValue type="img_chnl" value="" name="pRefChnl"></DValue>
+									<DValue value="{:ArcSDE.Connect.Dir}\default.das" type="string" name="exprtStorageLocFile"></DValue>
+									<DValue value="400000,4000000" type="string" name="spatDomainOffset"></DValue>
+									<DValue value="1000" type="string" name="spatDomainPrec"></DValue>
+								</Params>
+							</Algorithm>
+							<Domain guid="CED621BD-F4D1-4ffa-A2F6-DB2BB1913E8C">
+								<Params>
+									<DValue type="lvlName" name="valMapLvl">
+									<MapLvlProxy strName="ForestPrairieMask" bVrbl="0">
+									<Assignment MapLvl="1" MapName="main"></Assignment>
+									<Scope GUID="00000000-0000-0000-0000-000000000000"></Scope>
+									</MapLvlProxy>
+									</DValue>
+									<DValue type="vector" name="mClssFltr">
+									<Values>
+									<DValue value="7" type="clssId" indx="0"></DValue>
+									<DValue value="2" type="clssId" indx="1"></DValue>
+									<DValue value="6" type="clssId" indx="2"></DValue>
+									<DValue value="User defined" type="string" indx="3"></DValue>
+									</Values>
+									</DValue>
+									<DValue type="threshold" name="valThrsh"></DValue>
+									<DValue type="threshold" name="valThrsh2"></DValue>
+									<DValue value="From Parent" type="string" name="valMap"></DValue>
+									<DValue value="From Parent" type="string" name="valROI"></DValue>
+									<DValue value="0" type="int" name="iNumMaxObj"></DValue>
+									<DValue value="4" type="int" name="iVersion"></DValue>
+									<DValue value="-1" type="int" name="iOldLvl"></DValue>
+									<DValue value="0" type="int" name="iOldDsplLvl"></DValue>
+									<DValue value="0" type="int" name="iOldDsplNumLvl"></DValue>
+								</Params>
+							</Domain>
+							<SubProc></SubProc>
+						</ProcBase>
+					</SubProc>
+				</ProcBase>
+			</SubProc>
+		</ProcBase>
+	</ProcessList>
+	<ExportedItems></ExportedItems>
+	<LcnsIds></LcnsIds>
+</eCog.Proc>
