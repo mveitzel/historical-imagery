@@ -24,6 +24,8 @@ AppendixG.pdf
 
 Supplements:
 ------------
+Orthorectification-Georegistration_Guide.pdf
+
 SampleHistoricalRuleset_BM.dcp        eCognition ruleset for Blake Mountain in 1948
 SampleHistoricalRuleset_WC.dcp        eCognition ruleset for Willow Creek in 1948
 SampleNAIPruleset_BM.dcp              eCognition ruleset for Blake Mountain in 2009
